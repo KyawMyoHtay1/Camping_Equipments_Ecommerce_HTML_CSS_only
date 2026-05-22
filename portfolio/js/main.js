@@ -8,39 +8,30 @@ const PROJECT_LINKS = {
   camping: { github: "https://github.com/KyawMyoHtay1", demo: "#" },
 };
 
-document.getElementById("year").textContent = new Date().getFullYear();
+function wireProjectLinks() {
+  document.querySelectorAll(".project-github").forEach((btn) => {
+    const key = btn.dataset.project;
+    const url = PROJECT_LINKS[key]?.github;
+    if (url) {
+      btn.href = url;
+      btn.target = "_blank";
+      btn.rel = "noopener noreferrer";
+    }
+  });
+  document.querySelectorAll(".project-demo").forEach((btn) => {
+    const key = btn.dataset.project;
+    const url = PROJECT_LINKS[key]?.demo;
+    if (url && url !== "#") {
+      btn.href = url;
+      btn.target = "_blank";
+      btn.rel = "noopener noreferrer";
+    } else {
+      btn.addEventListener("click", (e) => e.preventDefault());
+      btn.classList.add("opacity-50", "cursor-not-allowed");
+      btn.title = "Demo coming soon";
+    }
+  });
+}
 
-/* Mobile nav */
-const navToggle = document.getElementById("navToggle");
-const navMobile = document.getElementById("navMobile");
-
-navToggle?.addEventListener("click", () => {
-  navMobile?.classList.toggle("hidden");
-});
-
-navMobile?.querySelectorAll("a").forEach((a) => {
-  a.addEventListener("click", () => navMobile.classList.add("hidden"));
-});
-
-/* Project links */
-document.querySelectorAll(".project-github").forEach((btn) => {
-  const url = PROJECT_LINKS[btn.dataset.project]?.github;
-  if (url) {
-    btn.href = url;
-    btn.target = "_blank";
-    btn.rel = "noopener noreferrer";
-  }
-});
-
-document.querySelectorAll(".project-demo").forEach((btn) => {
-  const url = PROJECT_LINKS[btn.dataset.project]?.demo;
-  if (url && url !== "#") {
-    btn.href = url;
-    btn.target = "_blank";
-    btn.rel = "noopener noreferrer";
-  } else {
-    btn.addEventListener("click", (e) => e.preventDefault());
-    btn.classList.add("opacity-50", "cursor-not-allowed");
-    btn.title = "Demo coming soon";
-  }
-});
+document.addEventListener("DOMContentLoaded", wireProjectLinks);
+window.wireProjectLinks = wireProjectLinks;
