@@ -1,24 +1,24 @@
 const PROJECT_GRADIENTS = {
-  portal: "from-indigo-900/60 to-slate-900",
-  elitearticles: "from-violet-900/60 to-slate-900",
-  "mhike-android": "from-emerald-900/60 to-slate-900",
-  "mhike-rn": "from-teal-900/60 to-slate-900",
-  android: "from-sky-900/60 to-slate-900",
-  nature: "from-cyan-900/60 to-slate-900",
-  libraria: "from-teal-900/60 to-slate-900",
-  smcworld: "from-amber-900/60 to-slate-900",
-  camping: "from-orange-900/60 to-slate-900",
-  brightcare: "from-rose-900/60 to-slate-900",
-  infinity: "from-violet-900/60 to-slate-900",
-  wellcome: "from-red-900/60 to-slate-900",
-  geekup: "from-indigo-900/60 to-slate-900",
-  gotham: "from-slate-700/60 to-slate-900",
-  walmart: "from-blue-900/60 to-slate-900",
-  fitness: "from-green-900/60 to-slate-900",
-  mcdonalds: "from-yellow-900/60 to-slate-900",
-  fordley: "from-gray-700/60 to-slate-900",
-  connect4: "from-purple-900/60 to-slate-900",
-  computersystems: "from-slate-800/60 to-slate-900",
+  portal: "from-indigo-300 to-indigo-500 dark:from-indigo-900/60 dark:to-slate-900",
+  elitearticles: "from-violet-300 to-violet-500 dark:from-violet-900/60 dark:to-slate-900",
+  "mhike-android": "from-emerald-300 to-emerald-600 dark:from-emerald-900/60 dark:to-slate-900",
+  "mhike-rn": "from-teal-300 to-teal-600 dark:from-teal-900/60 dark:to-slate-900",
+  android: "from-sky-300 to-sky-600 dark:from-sky-900/60 dark:to-slate-900",
+  nature: "from-cyan-300 to-cyan-600 dark:from-cyan-900/60 dark:to-slate-900",
+  libraria: "from-teal-300 to-teal-600 dark:from-teal-900/60 dark:to-slate-900",
+  smcworld: "from-amber-300 to-amber-600 dark:from-amber-900/60 dark:to-slate-900",
+  camping: "from-orange-300 to-orange-600 dark:from-orange-900/60 dark:to-slate-900",
+  brightcare: "from-rose-300 to-rose-600 dark:from-rose-900/60 dark:to-slate-900",
+  infinity: "from-violet-300 to-violet-600 dark:from-violet-900/60 dark:to-slate-900",
+  wellcome: "from-red-300 to-red-700 dark:from-red-900/60 dark:to-slate-900",
+  geekup: "from-indigo-300 to-indigo-600 dark:from-indigo-900/60 dark:to-slate-900",
+  gotham: "from-slate-400 to-slate-600 dark:from-slate-700/60 dark:to-slate-900",
+  walmart: "from-blue-300 to-blue-600 dark:from-blue-900/60 dark:to-slate-900",
+  fitness: "from-green-300 to-green-600 dark:from-green-900/60 dark:to-slate-900",
+  mcdonalds: "from-yellow-300 to-yellow-600 dark:from-yellow-900/60 dark:to-slate-900",
+  fordley: "from-gray-400 to-gray-600 dark:from-gray-700/60 dark:to-slate-900",
+  connect4: "from-purple-300 to-purple-600 dark:from-purple-900/60 dark:to-slate-900",
+  computersystems: "from-slate-400 to-slate-700 dark:from-slate-800/60 dark:to-slate-900",
 };
 
 const PROJECT_IMAGES = {
@@ -32,25 +32,26 @@ const PROJECT_IMAGES = {
 
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("projects-grid");
-  if (!grid) return;
+  if (!grid || !window.THEME) return;
+  const T = window.THEME;
 
   const renderCard = (id) => {
     const p = PROJECTS[id];
     if (!p) return "";
-    const grad = PROJECT_GRADIENTS[id] || "from-indigo-900/60 to-slate-900";
+    const grad = PROJECT_GRADIENTS[id] || "from-indigo-300 to-indigo-500 dark:from-indigo-900/60 dark:to-slate-900";
     const img = PROJECT_IMAGES[id];
     const media = img ? `<img src="${img}" alt="" class="h-full w-full object-cover" onerror="this.remove()">` : "";
     return `
-      <a href="project.html?id=${id}" class="card-lift group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-slate-800/40 transition hover:border-indigo-500/40 hover:shadow-xl hover:shadow-indigo-500/10">
+      <a href="project.html?id=${id}" class="${T.card}">
         <div class="project-card-media bg-gradient-to-br ${grad}">
           ${media}
-          <span class="absolute inset-0 flex items-center justify-center bg-slate-950/30 px-3 text-center text-sm font-bold text-white">${p.title}</span>
+          <span class="absolute inset-0 flex items-center justify-center bg-white/20 px-3 text-center text-sm font-bold text-gray-900 dark:bg-slate-950/30 dark:text-white">${p.title}</span>
         </div>
-        <div class="flex flex-1 flex-col p-5">
-          <p class="text-xs font-bold uppercase tracking-wider text-indigo-400">${p.subtitle}</p>
-          <p class="mt-2 flex-1 text-sm text-slate-400 line-clamp-2">${p.bullets[0]}</p>
-          <p class="mt-3 text-xs text-slate-500">${p.period}</p>
-          <span class="mt-4 text-sm font-semibold text-indigo-400">View details →</span>
+        <div class="${T.cardInner}">
+          <p class="${T.label}">${p.subtitle}</p>
+          <p class="mt-2 flex-1 ${T.textMuted} line-clamp-2">${p.bullets[0]}</p>
+          <p class="mt-3 ${T.textSmall}">${p.period}</p>
+          <span class="mt-4 ${T.link}">View details →</span>
         </div>
       </a>`;
   };
@@ -64,11 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-filter]").forEach((btn) => {
     btn.addEventListener("click", () => {
       document.querySelectorAll("[data-filter]").forEach((b) => {
-        b.classList.remove("bg-indigo-600", "text-white");
-        b.classList.add("border", "border-white/20", "text-slate-300");
+        b.className = T.btnFilter;
       });
-      btn.classList.add("bg-indigo-600", "text-white");
-      btn.classList.remove("border", "border-white/20", "text-slate-300");
+      btn.className = T.btnFilterActive;
 
       const filter = btn.dataset.filter;
       const ids =
