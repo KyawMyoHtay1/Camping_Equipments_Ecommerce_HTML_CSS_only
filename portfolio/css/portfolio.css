@@ -30,8 +30,18 @@ html.dark .card-lift:hover {
 }
 .group:hover .project-card-media img { transform: scale(1.05); }
 
-/* Theme toggle icons */
-#themeToggle [data-theme-icon] { display: none; }
+/* Theme toggle icons — one icon visible, centered in button */
+#themeToggle {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+#themeToggle [data-theme-icon] {
+  display: none;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
 html:not(.dark) #themeToggle [data-theme-icon="sun"] { display: block; }
 html.dark #themeToggle [data-theme-icon="moon"] { display: block; }
 

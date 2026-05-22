@@ -26,22 +26,22 @@
   };
 
   const themeBtn = `
-    <button id="themeToggle" type="button" class="rounded-lg border border-gray-200 bg-gray-100 p-2 text-gray-700 hover:bg-gray-200 dark:border-white/10 dark:bg-white/5 dark:text-slate-300 dark:hover:bg-white/10" aria-label="Toggle theme" title="Toggle light/dark mode">
+    <button id="themeToggle" type="button" class="inline-flex shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-100 p-2 text-gray-700 hover:bg-gray-200 dark:border-white/10 dark:bg-white/5 dark:text-slate-300 dark:hover:bg-white/10" aria-label="Toggle theme" title="Toggle light/dark mode">
       <svg data-theme-icon="sun" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
       <svg data-theme-icon="moon" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
     </button>`;
 
   const header = `
     <header class="fixed inset-x-0 top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/85">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
-        <a href="${base}index.html" class="text-lg font-bold text-gray-900 dark:text-white">Kyaw Myo <span class="text-indigo-600 dark:text-indigo-400">Htay</span></a>
-        <div class="flex items-center gap-2">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <a href="${base}index.html" class="shrink-0 text-lg font-bold text-gray-900 dark:text-white">Kyaw Myo <span class="text-indigo-600 dark:text-indigo-400">Htay</span></a>
+        <div class="flex items-center gap-2 sm:gap-3">
+          <ul id="navMenu" class="hidden items-center gap-1 lg:flex">${links.map((l) => navLink(l, false)).join("")}</ul>
           ${themeBtn}
-          <button id="navToggle" type="button" class="rounded-lg p-2 text-gray-600 hover:bg-gray-100 lg:hidden dark:text-slate-300 dark:hover:bg-white/10" aria-label="Menu">
+          <button id="navToggle" type="button" class="inline-flex shrink-0 rounded-lg p-2 text-gray-600 hover:bg-gray-100 lg:hidden dark:text-slate-300 dark:hover:bg-white/10" aria-label="Menu">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           </button>
         </div>
-        <ul id="navMenu" class="hidden gap-1 lg:flex">${links.map((l) => navLink(l, false)).join("")}</ul>
       </nav>
       <ul id="navMobile" class="hidden border-t border-gray-200 bg-white px-4 py-3 dark:border-white/10 dark:bg-slate-950 lg:hidden">${links.map((l) => navLink(l, true)).join("")}</ul>
     </header>`;
