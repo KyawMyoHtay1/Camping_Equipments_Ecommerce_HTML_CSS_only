@@ -75,15 +75,15 @@
         </div>
         <div class="mt-10 grid gap-6 sm:grid-cols-3">
           <a href="project.html?id=portal" class="card-lift group overflow-hidden rounded-2xl border border-gray-200 bg-white hover:border-indigo-400 dark:border-white/10 dark:bg-slate-800/40 dark:hover:border-indigo-500/40">
-            <div class="project-card-media bg-gradient-to-br from-indigo-200 to-indigo-400 dark:from-indigo-900/60 dark:to-slate-900"><span class="absolute inset-0 flex items-center justify-center text-lg font-bold text-indigo-800 dark:text-indigo-300/90">Academic Portal</span></div>
+            <div data-project-thumb="portal" class="project-card-media bg-gradient-to-br from-indigo-200 to-indigo-400 dark:from-indigo-900/60 dark:to-slate-900"></div>
             <div class="p-5"><p class="text-xs text-indigo-600 dark:text-indigo-400">FYP · Laravel + Vue</p><h3 class="mt-2 font-bold text-gray-900 dark:text-white">University Academic Portal</h3><p class="mt-2 text-sm text-gray-600 dark:text-slate-400">Stripe · RBAC · PHPUnit</p></div>
           </a>
           <a href="project.html?id=elitearticles" class="card-lift group overflow-hidden rounded-2xl border border-gray-200 bg-white hover:border-violet-400 dark:border-white/10 dark:bg-slate-800/40 dark:hover:border-violet-500/40">
-            <div class="project-card-media bg-gradient-to-br from-violet-200 to-violet-400 dark:from-violet-900/60 dark:to-slate-900"><span class="absolute inset-0 flex items-center justify-center text-lg font-bold text-violet-800 dark:text-violet-300/90">EliteArticles</span></div>
+            <div data-project-thumb="elitearticles" class="project-card-media bg-gradient-to-br from-violet-200 to-violet-400 dark:from-violet-900/60 dark:to-slate-900"></div>
             <div class="p-5"><p class="text-xs text-violet-600 dark:text-violet-400">Team Lead</p><h3 class="mt-2 font-bold text-gray-900 dark:text-white">Magazine System</h3><p class="mt-2 text-sm text-gray-600 dark:text-slate-400">Scrum · Jira · Laravel</p></div>
           </a>
           <a href="project.html?id=mhike-android" class="card-lift group overflow-hidden rounded-2xl border border-gray-200 bg-white hover:border-emerald-400 dark:border-white/10 dark:bg-slate-800/40 dark:hover:border-emerald-500/40">
-            <div class="project-card-media bg-gradient-to-br from-emerald-200 to-emerald-500 dark:from-emerald-900/60 dark:to-slate-900"><span class="absolute inset-0 flex items-center justify-center text-lg font-bold text-emerald-800 dark:text-emerald-300/90">M-Hike</span></div>
+            <div data-project-thumb="mhike-android" class="project-card-media bg-gradient-to-br from-emerald-200 to-emerald-500 dark:from-emerald-900/60 dark:to-slate-900"></div>
             <div class="p-5"><p class="text-xs text-emerald-600 dark:text-emerald-400">Mobile</p><h3 class="mt-2 font-bold text-gray-900 dark:text-white">M-Hike Android</h3><p class="mt-2 text-sm text-gray-600 dark:text-slate-400">Kotlin · SQLite</p></div>
           </a>
         </div>
@@ -92,7 +92,21 @@
   </main>
 
   <div id="site-footer"></div>
+  <script src="js/project-images.js"></script>
   <script src="js/theme.js"></script>
   <script src="js/layout.js" data-base=""></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("[data-project-thumb]").forEach((el) => {
+        const src = window.PROJECT_IMAGES?.[el.dataset.projectThumb];
+        if (!src) return;
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = "";
+        img.className = "h-full w-full object-cover";
+        el.appendChild(img);
+      });
+    });
+  </script>
 </body>
 </html>
