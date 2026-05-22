@@ -21,7 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  document.title = `${p.title} | Kyaw Myo Htay`;
+  document.title = `${p.title} · Kyaw Myo Htay | Portfolio`;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && p.bullets?.[0]) {
+    const text = p.bullets[0].replace(/\s+/g, " ").trim();
+    metaDesc.setAttribute(
+      "content",
+      (text.length > 152 ? text.slice(0, 149) + "…" : text) + " — Kyaw Myo Htay portfolio."
+    );
+  }
   const grad = gradients[id] || "from-indigo-500 to-slate-700 dark:from-indigo-900 dark:to-slate-800";
   const img = window.PROJECT_IMAGES?.[id];
   const bannerImg = img
