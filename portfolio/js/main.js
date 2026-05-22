@@ -3,30 +3,22 @@ const PROJECT_LINKS = {
   elitearticles: { github: "https://github.com/KyawMyoHtay1", demo: "#" },
   libraria: { github: "https://github.com/KyawMyoHtay1", demo: "#" },
   smcworld: { github: "https://github.com/KyawMyoHtay1", demo: "#" },
+  camping: { github: "https://github.com/KyawMyoHtay1", demo: "#" },
 };
 
-const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
-/* Mobile sidebar */
-const menuBtn = document.querySelector(".menu-btn");
-const sidebar = document.getElementById("sidebar");
-const overlay = document.querySelector(".overlay");
+/* Mobile nav */
+const navToggle = document.getElementById("navToggle");
+const navMobile = document.getElementById("navMobile");
 
-function closeMenu() {
-  sidebar?.classList.remove("open");
-  overlay?.classList.remove("show");
-  menuBtn?.setAttribute("aria-expanded", "false");
-}
+navToggle?.addEventListener("click", () => {
+  navMobile?.classList.toggle("hidden");
+});
 
-if (menuBtn && sidebar) {
-  menuBtn.addEventListener("click", () => {
-    const open = sidebar.classList.toggle("open");
-    overlay?.classList.toggle("show", open);
-    menuBtn.setAttribute("aria-expanded", open);
-  });
-  overlay?.addEventListener("click", closeMenu);
-}
+navMobile?.querySelectorAll("a").forEach((a) => {
+  a.addEventListener("click", () => navMobile.classList.add("hidden"));
+});
 
 /* Project links */
 document.querySelectorAll(".project-github").forEach((btn) => {
@@ -45,7 +37,8 @@ document.querySelectorAll(".project-demo").forEach((btn) => {
     btn.target = "_blank";
     btn.rel = "noopener noreferrer";
   } else {
-    btn.classList.add("disabled");
     btn.addEventListener("click", (e) => e.preventDefault());
+    btn.classList.add("opacity-50", "cursor-not-allowed");
+    btn.title = "Demo coming soon";
   }
 });

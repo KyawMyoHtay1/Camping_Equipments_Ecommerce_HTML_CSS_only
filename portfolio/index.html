@@ -1,294 +1,394 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kyaw Myo Htay — Junior Web Developer. Portfolio aligned with professional CV. PHP, Laravel, Vue.js, JavaScript.">
-  <title>Kyaw Myo Htay | Portfolio</title>
+  <meta name="description" content="Kyaw Myo Htay — Junior Web Developer. PHP, Laravel, Vue.js, JavaScript portfolio.">
+  <title>Kyaw Myo Htay | Web Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: { 50: '#eef2ff', 100: '#e0e7ff', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' },
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body>
-  <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="overlay" aria-hidden="true"></div>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
 
-  <div class="layout">
-    <!-- Sidebar — matches CV left column -->
-    <aside class="sidebar" id="sidebar">
-      <div class="profile-wrap">
-        <img src="images/profile.jpg" alt="Kyaw Myo Htay" class="profile-photo" width="200" height="200">
+  <!-- Navigation -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-lg">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#home" class="text-lg font-bold tracking-tight text-white">Kyaw Myo <span class="text-indigo-400">Htay</span></a>
+      <button id="navToggle" type="button" class="inline-flex items-center justify-center rounded-lg p-2 text-slate-300 hover:bg-white/10 lg:hidden" aria-label="Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <ul id="navMenu" class="hidden gap-1 lg:flex">
+        <li><a href="#home" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white">Home</a></li>
+        <li><a href="#about" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white">About</a></li>
+        <li><a href="#skills" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white">Skills</a></li>
+        <li><a href="#projects" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white">Projects</a></li>
+        <li><a href="#education" class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white">Education</a></li>
+        <li><a href="#contact" class="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500">Contact</a></li>
+      </ul>
+    </nav>
+    <ul id="navMobile" class="hidden border-t border-white/10 bg-slate-950 px-4 py-3 lg:hidden">
+      <li><a href="#home" class="block rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/5">Home</a></li>
+      <li><a href="#about" class="block rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/5">About</a></li>
+      <li><a href="#skills" class="block rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/5">Skills</a></li>
+      <li><a href="#projects" class="block rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/5">Projects</a></li>
+      <li><a href="#education" class="block rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/5">Education</a></li>
+      <li><a href="#contact" class="block rounded-lg px-3 py-2 text-sm font-semibold text-indigo-400">Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="relative overflow-hidden pt-28 pb-20 sm:pt-32 sm:pb-28">
+      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/40 via-slate-950 to-slate-950"></div>
+      <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+        <div>
+          <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-400">
+            <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Open to opportunities
+          </span>
+          <p class="mb-2 text-lg text-slate-400">Hello, I'm</p>
+          <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Kyaw Myo <span class="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">Htay</span>
+          </h1>
+          <p class="mt-3 text-xl font-semibold text-indigo-300">Junior Web Developer</p>
+          <p class="mt-4 max-w-xl text-base leading-relaxed text-slate-400">
+            Final-year <strong class="text-slate-200">BSc (Hons) Computing</strong> student at University of Greenwich (KMD).
+            I build responsive web apps with PHP, Laravel, Vue.js, and JavaScript.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-600/25 hover:bg-indigo-500">View Projects</a>
+            <a href="#contact" class="inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:bg-white/5">Contact Me</a>
+          </div>
+          <div class="mt-8 flex gap-3">
+            <a href="https://github.com/KyawMyoHtay1" target="_blank" rel="noopener" class="rounded-lg border border-white/10 p-2.5 text-slate-400 hover:border-indigo-500/50 hover:text-white" aria-label="GitHub">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A8.34 8.34 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/kyaw-myo-htay-117b47360/" target="_blank" rel="noopener" class="rounded-lg border border-white/10 p-2.5 text-slate-400 hover:border-indigo-500/50 hover:text-white" aria-label="LinkedIn">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:kyawmyohtay2004@gmail.com" class="rounded-lg border border-white/10 p-2.5 text-slate-400 hover:border-indigo-500/50 hover:text-white" aria-label="Email">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="flex justify-center lg:justify-end">
+          <div class="relative">
+            <div class="absolute -inset-4 rounded-full bg-indigo-600/30 blur-3xl"></div>
+            <img src="images/profile.jpg" alt="Kyaw Myo Htay" class="relative h-64 w-64 rounded-2xl border-2 border-white/10 object-cover shadow-2xl sm:h-80 sm:w-80" onerror="this.classList.add('hidden');document.getElementById('profileFallback').classList.remove('hidden');">
+            <div id="profileFallback" class="relative hidden flex h-64 w-64 items-center justify-center rounded-2xl border-2 border-white/10 bg-slate-800 text-5xl font-bold text-indigo-400 sm:h-80 sm:w-80">KMH</div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <section class="side-block">
-        <h2 class="side-title">Contact</h2>
-        <ul class="side-list">
-          <li><span class="label">Phone</span><a href="tel:+959405552491">+95 940 555 2491</a></li>
-          <li><span class="label">E-Mail</span><a href="mailto:kyawmyohtay2004@gmail.com">kyawmyohtay2004@gmail.com</a></li>
-          <li><span class="label">Address</span><span>No.23, First Floor, 44th Street, Botahtaung Township, Yangon</span></li>
-          <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/kyaw-myo-htay-117b47360/" target="_blank" rel="noopener">linkedin.com/in/kyaw-myo-htay-117b47360</a></li>
-          <li><span class="label">GitHub</span><a href="https://github.com/KyawMyoHtay1" target="_blank" rel="noopener">github.com/KyawMyoHtay1</a></li>
-        </ul>
-      </section>
-
-      <section class="side-block">
-        <h2 class="side-title">Personal Details</h2>
-        <ul class="side-list">
-          <li><span class="label">DOB</span><span>26 September 2004</span></li>
-          <li><span class="label">Nationality</span><span>Myanmar</span></li>
-          <li><span class="label">Gender</span><span>Male</span></li>
-        </ul>
-      </section>
-
-      <section class="side-block">
-        <h2 class="side-title">Education</h2>
-        <div class="edu-item">
-          <h3>University of Greenwich</h3>
-          <p class="edu-degree">BSc (Hons) Computing</p>
-          <p class="edu-meta">Jul 2025 – Present</p>
-          <p class="edu-meta">Final Year — In Progress (Result Pending)</p>
-        </div>
-        <div class="edu-item">
-          <h3>NCC Education</h3>
-          <p class="edu-degree">Level 5 Diploma in Computing (IT)</p>
-          <p class="edu-meta">Jul 2024 – Jul 2025 · Grade: A</p>
-          <p class="edu-note">Distinctions: Computer Project, Database Design & Development, Dynamic Websites, Information System Analysis, Agile Development</p>
-          <p class="edu-note">Merit: Network Security and Cryptography</p>
-        </div>
-        <div class="edu-item">
-          <h3>NCC Education</h3>
-          <p class="edu-degree">Level 4 Diploma in Computing (IT)</p>
-          <p class="edu-meta">Jul 2023 – Jul 2024 · Grade: A</p>
-        </div>
-        <div class="edu-item">
-          <h3>NCC Education</h3>
-          <p class="edu-degree">Level 3 Diploma in Computing (IT)</p>
-          <p class="edu-meta">Jan 2023 – Jul 2023 · Grade: A</p>
-        </div>
-      </section>
-
-      <section class="side-block">
-        <h2 class="side-title">Technical Skills</h2>
-        <div class="skill-row"><strong>Programming</strong><p>PHP, TypeScript, JavaScript, Kotlin, Java, SQL, C#</p></div>
-        <div class="skill-row"><strong>Frontend</strong><p>HTML, CSS, Bootstrap, Tailwind CSS, Vue.js</p></div>
-        <div class="skill-row"><strong>Backend</strong><p>Laravel, Pure PHP, REST API integration</p></div>
-        <div class="skill-row"><strong>Mobile</strong><p>React Native, Expo, Android, Kotlin</p></div>
-        <div class="skill-row"><strong>Database</strong><p>MySQL, SQLite, SQL Server, Room</p></div>
-        <div class="skill-row"><strong>Engineering</strong><p>Agile DSDM, Scrum, UML, Requirements</p></div>
-        <div class="skill-row"><strong>UI/UX</strong><p>Axure RP 11, HCI, Wireframing</p></div>
-        <div class="skill-row"><strong>Tools</strong><p>Git, GitHub, Postman, XAMPP, VS Code, Jira</p></div>
-      </section>
-
-      <section class="side-block">
-        <h2 class="side-title">Soft Skills</h2>
-        <ul class="tag-list">
-          <li>Communication</li><li>Problem-Solving</li><li>Teamwork</li><li>Leadership</li>
-          <li>Time Management</li><li>Analytical Thinking</li><li>Adaptability</li>
-        </ul>
-      </section>
-
-      <section class="side-block">
-        <h2 class="side-title">Languages</h2>
-        <ul class="side-list plain">
-          <li>English — Intermediate</li>
-          <li>Myanmar — Native</li>
-        </ul>
-      </section>
-
-      <section class="side-block">
-        <h2 class="side-title">Certifications</h2>
-        <ul class="cert-list">
-          <li>Vue + Laravel Full Stack · Creative Coder (Oct 2025)</li>
-          <li>Git & GitHub Intermediate · Creative Coder (Sep 2025)</li>
-          <li>Programming Fundamentals · KMD (Jun 2024)</li>
-        </ul>
-      </section>
-    </aside>
-
-    <!-- Main — matches CV right column -->
-    <main class="main" id="main">
-      <header class="main-header">
-        <h1>KYAW MYO HTAY</h1>
-        <p class="role-line">Junior Web Developer · Computing Student</p>
-      </header>
-
-      <section class="main-section" id="objective">
-        <h2 class="main-title">Objective</h2>
-        <p>
-          Dedicated and adaptable Computing student with practical experience in web development,
-          mobile application development, database design, and system analysis through academic and
-          software engineering projects. Proficient in building responsive applications using modern
-          technologies and applying Agile development practices, teamwork, and problem-solving skills.
-          Eager to contribute technical knowledge and analytical abilities to a professional IT environment
-          while continuing to develop expertise in software and business technology solutions.
-        </p>
-      </section>
-
-      <section class="main-section" id="projects">
-        <h2 class="main-title">Experience in Projects</h2>
-
-        <article class="project">
-          <header class="project-head">
-            <h3>University Academic Portal — Vue.js & Laravel</h3>
-            <span class="project-date">Aug 2025 – Apr 2026</span>
-          </header>
-          <p class="project-sub">Individual Final Year Project | University of Greenwich · <em>Full Stack Developer</em></p>
-          <p class="tech-line"><strong>Technologies:</strong> PHP, Laravel, Vue.js, Inertia.js, MySQL, Tailwind CSS, Vite, Git, GitHub, Stripe, PHPUnit</p>
-          <ul>
-            <li>Designed and developed a multi-user University Academic Portal for students, teachers, staff, and guests.</li>
-            <li>Implemented registration, enrolment, grades, assignments, fee payment, timetables, attendance, announcements, messaging, and notifications.</li>
-            <li>Delivered RBAC, relational database design, validation, GPA calculation, search, email verification, and responsive UIs.</li>
-            <li>Integrated Stripe Checkout with webhooks; built queue-backed notifications and scheduled jobs for attendance alerts.</li>
-            <li>Applied Agile DSDM (MoSCoW, timeboxing, usability testing); produced ER diagrams, use cases, sequence/class diagrams, test plans, and LESPI evaluation aligned with BCS standards.</li>
-          </ul>
-          <div class="project-btns">
-            <a href="#" class="btn btn-dark project-github" data-project="portal">GitHub</a>
-            <a href="#" class="btn btn-outline project-demo" data-project="portal">Live Demo</a>
+    <!-- About -->
+    <section id="about" class="border-t border-white/10 bg-slate-900/50 py-20">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <p class="text-sm font-semibold uppercase tracking-widest text-indigo-400">About</p>
+        <h2 class="mt-2 text-3xl font-bold text-white sm:text-4xl">Who I am</h2>
+        <div class="mt-8 grid gap-8 lg:grid-cols-3">
+          <div class="lg:col-span-2 space-y-4 text-slate-400 leading-relaxed">
+            <p>Dedicated and adaptable Computing student with practical experience in web development, mobile application development, database design, and system analysis through academic and software engineering projects.</p>
+            <p>Proficient in building responsive applications using modern technologies and applying Agile development practices, teamwork, and problem-solving skills. Seeking a junior web developer role to learn from senior developers and grow long term.</p>
           </div>
-        </article>
-
-        <article class="project">
-          <header class="project-head">
-            <h3>EliteArticles — Annual University Magazine System</h3>
-            <span class="project-date">Jan 2026 – Apr 2026</span>
-          </header>
-          <p class="project-sub">Final Year Group Project | University of Greenwich · <em>Team Leader & Backend Developer</em></p>
-          <p class="tech-line"><strong>Technologies:</strong> PHP, Laravel, MySQL, Blade, Git, GitHub, Jira, PHPUnit</p>
-          <ul>
-            <li>Led delivery using Agile Scrum, sprint planning, and coordination via Jira and GitHub.</li>
-            <li>Built authentication, RBAC, contribution workflows, coordinator review, manager reporting (ZIP export), and faculty-scoped guest access.</li>
-            <li>Designed relational schemas, ERDs, and validation; produced user stories, test plans, sitemaps, and class diagrams.</li>
-          </ul>
-          <div class="project-btns">
-            <a href="#" class="btn btn-dark project-github" data-project="elitearticles">GitHub</a>
-            <a href="#" class="btn btn-outline project-demo" data-project="elitearticles">Live Demo</a>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-xl border border-white/10 bg-slate-800/50 p-5 text-center">
+              <p class="text-3xl font-bold text-indigo-400">A</p>
+              <p class="mt-1 text-xs text-slate-500">NCC L3–L5</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-slate-800/50 p-5 text-center">
+              <p class="text-3xl font-bold text-indigo-400">10+</p>
+              <p class="mt-1 text-xs text-slate-500">Projects</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-slate-800/50 p-5 text-center">
+              <p class="text-3xl font-bold text-indigo-400">FYP</p>
+              <p class="mt-1 text-xs text-slate-500">Full Stack</p>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-slate-800/50 p-5 text-center">
+              <p class="text-3xl font-bold text-indigo-400">EN</p>
+              <p class="mt-1 text-xs text-slate-500">Intermediate</p>
+            </div>
           </div>
-        </article>
+        </div>
+      </div>
+    </section>
 
-        <article class="project">
-          <header class="project-head">
-            <h3>M-Hike — Native Android Application</h3>
-            <span class="project-date">Aug 2025 – Dec 2025</span>
-          </header>
-          <p class="project-sub">Mobile Application Development Project | University of Greenwich</p>
-          <p class="tech-line"><strong>Technologies:</strong> Kotlin, Android SDK, SQLite, Material Design, XML</p>
-          <ul>
-            <li>Developed a hiking management app with full CRUD for hikes and observations and layered SQLite architecture.</li>
-            <li>Built validation, confirmation screens, advanced search/filter, and RecyclerView lists with Material Design UI.</li>
-            <li>Applied HCI principles using ConstraintLayout, themes, and navigation patterns.</li>
-          </ul>
-        </article>
-
-        <article class="project">
-          <header class="project-head">
-            <h3>M-Hike — Cross-Platform Application (React Native)</h3>
-            <span class="project-date">Aug 2025 – Dec 2025</span>
-          </header>
-          <p class="project-sub">Mobile Application Development Project | University of Greenwich</p>
-          <p class="tech-line"><strong>Technologies:</strong> TypeScript, React Native, Expo, SQLite, Formik, Yup, React Native Paper</p>
-          <ul>
-            <li>Built a cross-platform hike app with file-based navigation, typed models, and a modular service layer.</li>
-            <li>Integrated GPS, reverse geocoding, camera/gallery capture, and OpenWeatherMap on detail screens.</li>
-            <li>Implemented validated forms and responsive UI for Android, iOS, and Web.</li>
-          </ul>
-        </article>
-
-        <article class="project">
-          <header class="project-head">
-            <h3>Android Development Portfolio</h3>
-            <span class="project-date">Aug 2025 – Dec 2025</span>
-          </header>
-          <p class="project-sub">Practical Projects | University of Greenwich</p>
-          <p class="tech-line"><strong>Technologies:</strong> Kotlin, Android SDK, Room, RecyclerView, Material Design</p>
-          <ul>
-            <li><strong>Calculator:</strong> arithmetic operations, validation, divide-by-zero handling, Toast feedback, animations.</li>
-            <li><strong>Contact Manager:</strong> Room storage, coroutines, DAO/repository pattern, form validation.</li>
-            <li><strong>Image Viewer:</strong> gallery navigation, fade animations, on-screen image counter.</li>
-          </ul>
-        </article>
-
-        <article class="project">
-          <header class="project-head">
-            <h3>Libraria — Library Management System</h3>
-            <span class="project-date">Jan 2025 – May 2025</span>
-          </header>
-          <p class="project-sub">Graduation Assignment | NCC Level 5 · <em>Web Developer & Database Designer</em></p>
-          <p class="tech-line"><strong>Technologies:</strong> PHP, MySQL, HTML, CSS, JavaScript, Bootstrap, jQuery</p>
-          <ul>
-            <li>Digitized book, member, staff, borrowing, return, fine, and feedback workflows with admin reporting charts.</li>
-            <li>Designed database schema with use cases, class/sequence diagrams, and functional requirements.</li>
-            <li>Applied DSDM (MoSCoW, timeboxing, SWOT, risk management, LESPI); delivered testing and deployment planning.</li>
-          </ul>
-          <div class="project-btns">
-            <a href="#" class="btn btn-dark project-github" data-project="libraria">GitHub</a>
-            <a href="#" class="btn btn-outline project-demo" data-project="libraria">Live Demo</a>
+    <!-- Skills -->
+    <section id="skills" class="py-20">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <p class="text-sm font-semibold uppercase tracking-widest text-indigo-400">Skills</p>
+        <h2 class="mt-2 text-3xl font-bold text-white sm:text-4xl">Technical expertise</h2>
+        <div class="mt-10 grid gap-6 sm:grid-cols-2">
+          <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+            <h3 class="font-semibold text-white">Frontend</h3>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-lg bg-indigo-500/15 px-2.5 py-1 text-xs font-medium text-indigo-300">HTML5</span>
+              <span class="rounded-lg bg-indigo-500/15 px-2.5 py-1 text-xs font-medium text-indigo-300">CSS3</span>
+              <span class="rounded-lg bg-indigo-500/15 px-2.5 py-1 text-xs font-medium text-indigo-300">JavaScript</span>
+              <span class="rounded-lg bg-indigo-500/15 px-2.5 py-1 text-xs font-medium text-indigo-300">TypeScript</span>
+              <span class="rounded-lg bg-indigo-500/15 px-2.5 py-1 text-xs font-medium text-indigo-300">jQuery</span>
+              <span class="rounded-lg bg-indigo-500/15 px-2.5 py-1 text-xs font-medium text-indigo-300">Bootstrap</span>
+              <span class="rounded-lg bg-indigo-500/15 px-2.5 py-1 text-xs font-medium text-indigo-300">Tailwind CSS</span>
+              <span class="rounded-lg bg-indigo-500/15 px-2.5 py-1 text-xs font-medium text-indigo-300">Vue.js</span>
+            </div>
           </div>
-        </article>
-
-        <article class="project">
-          <header class="project-head">
-            <h3>SMCWorld — Social Media Campaign Website</h3>
-            <span class="project-date">Jul 2024 – Dec 2024</span>
-          </header>
-          <p class="project-sub">Dynamic Website Development | NCC Level 5 · <em>PHP Web Developer</em></p>
-          <p class="tech-line"><strong>Technologies:</strong> PHP, MySQL, HTML, CSS, JavaScript</p>
-          <ul>
-            <li>Built public and admin interfaces with authentication, registration, contact forms, and search.</li>
-            <li>Implemented CRUD, relational schema, responsive CSS, reCAPTCHA, and Google Translate integration.</li>
-          </ul>
-          <div class="project-btns">
-            <a href="#" class="btn btn-dark project-github" data-project="smcworld">GitHub</a>
-            <a href="#" class="btn btn-outline project-demo" data-project="smcworld">Live Demo</a>
+          <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+            <h3 class="font-semibold text-white">Backend</h3>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-lg bg-violet-500/15 px-2.5 py-1 text-xs font-medium text-violet-300">PHP</span>
+              <span class="rounded-lg bg-violet-500/15 px-2.5 py-1 text-xs font-medium text-violet-300">Laravel</span>
+              <span class="rounded-lg bg-violet-500/15 px-2.5 py-1 text-xs font-medium text-violet-300">Inertia.js</span>
+              <span class="rounded-lg bg-violet-500/15 px-2.5 py-1 text-xs font-medium text-violet-300">REST API</span>
+              <span class="rounded-lg bg-violet-500/15 px-2.5 py-1 text-xs font-medium text-violet-300">MySQL</span>
+              <span class="rounded-lg bg-violet-500/15 px-2.5 py-1 text-xs font-medium text-violet-300">SQL Server</span>
+            </div>
           </div>
-        </article>
+          <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+            <h3 class="font-semibold text-white">Mobile & Tools</h3>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-lg bg-emerald-500/15 px-2.5 py-1 text-xs font-medium text-emerald-300">Kotlin</span>
+              <span class="rounded-lg bg-emerald-500/15 px-2.5 py-1 text-xs font-medium text-emerald-300">React Native</span>
+              <span class="rounded-lg bg-emerald-500/15 px-2.5 py-1 text-xs font-medium text-emerald-300">Expo</span>
+              <span class="rounded-lg bg-emerald-500/15 px-2.5 py-1 text-xs font-medium text-emerald-300">Git</span>
+              <span class="rounded-lg bg-emerald-500/15 px-2.5 py-1 text-xs font-medium text-emerald-300">GitHub</span>
+              <span class="rounded-lg bg-emerald-500/15 px-2.5 py-1 text-xs font-medium text-emerald-300">Jira</span>
+              <span class="rounded-lg bg-emerald-500/15 px-2.5 py-1 text-xs font-medium text-emerald-300">PHPUnit</span>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
+            <h3 class="font-semibold text-white">Methods</h3>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-lg bg-amber-500/15 px-2.5 py-1 text-xs font-medium text-amber-300">Agile Scrum</span>
+              <span class="rounded-lg bg-amber-500/15 px-2.5 py-1 text-xs font-medium text-amber-300">DSDM</span>
+              <span class="rounded-lg bg-amber-500/15 px-2.5 py-1 text-xs font-medium text-amber-300">UML</span>
+              <span class="rounded-lg bg-amber-500/15 px-2.5 py-1 text-xs font-medium text-amber-300">System Analysis</span>
+              <span class="rounded-lg bg-amber-500/15 px-2.5 py-1 text-xs font-medium text-amber-300">Axure RP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <article class="project">
-          <header class="project-head">
-            <h3>Nature Explore — HCI Educational Tablet Application</h3>
-            <span class="project-date">Aug 2025 – Dec 2025</span>
-          </header>
-          <p class="project-sub">HCI Project | University of Greenwich · <em>UI/UX Designer & Prototype Developer</em></p>
-          <p class="tech-line"><strong>Technologies:</strong> Axure RP 11, HCI Principles</p>
-          <ul>
-            <li>Designed a mid-fidelity tablet prototype for child-friendly nature learning (quizzes, maps, progress, parent dashboard concepts).</li>
-            <li>Applied accessibility, cognitive psychology, and interaction design; produced user flows, sitemaps, and conceptual diagrams.</li>
+    <!-- Projects -->
+    <section id="projects" class="border-t border-white/10 bg-slate-900/50 py-20">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <p class="text-sm font-semibold uppercase tracking-widest text-indigo-400">Portfolio</p>
+        <h2 class="mt-2 text-3xl font-bold text-white sm:text-4xl">Featured projects</h2>
+        <p class="mt-3 max-w-2xl text-slate-400">Selected work from university and diploma programmes.</p>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2">
+          <!-- Project cards injected via same structure -->
+          <article class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-slate-800/40 transition hover:border-indigo-500/40 hover:shadow-xl hover:shadow-indigo-500/10">
+            <div class="flex h-44 items-center justify-center bg-gradient-to-br from-indigo-900/60 to-slate-900">
+              <img src="images/portal.jpg" alt="" class="h-full w-full object-cover opacity-90 group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+              <span class="text-lg font-bold text-indigo-300/80">Academic Portal</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex flex-wrap gap-2">
+                <span class="rounded bg-indigo-500/20 px-2 py-0.5 text-xs text-indigo-300">Laravel</span>
+                <span class="rounded bg-indigo-500/20 px-2 py-0.5 text-xs text-indigo-300">Vue.js</span>
+              </div>
+              <h3 class="mt-3 font-bold text-white">University Academic Portal</h3>
+              <p class="mt-2 flex-1 text-sm text-slate-400">Multi-role portal with Stripe payments, RBAC, queues, and PHPUnit testing.</p>
+              <p class="mt-2 text-xs text-slate-500">Aug 2025 – Apr 2026 · FYP</p>
+              <div class="mt-4 flex gap-2">
+                <a href="#" data-project="portal" class="project-github rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-indigo-500">GitHub</a>
+                <a href="#" data-project="portal" class="project-demo rounded-lg border border-white/20 px-3 py-1.5 text-xs font-semibold text-slate-300 hover:bg-white/5">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-slate-800/40 transition hover:border-indigo-500/40">
+            <div class="flex h-44 items-center justify-center bg-gradient-to-br from-violet-900/60 to-slate-900">
+              <img src="images/elitearticles.jpg" alt="" class="h-full w-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+              <span class="text-lg font-bold text-violet-300/80">EliteArticles</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex flex-wrap gap-2">
+                <span class="rounded bg-violet-500/20 px-2 py-0.5 text-xs text-violet-300">Laravel</span>
+                <span class="rounded bg-violet-500/20 px-2 py-0.5 text-xs text-violet-300">Jira</span>
+              </div>
+              <h3 class="mt-3 font-bold text-white">EliteArticles Magazine System</h3>
+              <p class="mt-2 flex-1 text-sm text-slate-400">Team Leader — submission workflows, RBAC, ZIP reporting, Scrum delivery.</p>
+              <p class="mt-2 text-xs text-slate-500">Jan 2026 – Apr 2026</p>
+              <div class="mt-4 flex gap-2">
+                <a href="#" data-project="elitearticles" class="project-github rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-indigo-500">GitHub</a>
+                <a href="#" data-project="elitearticles" class="project-demo rounded-lg border border-white/20 px-3 py-1.5 text-xs font-semibold text-slate-300">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-slate-800/40 transition hover:border-indigo-500/40">
+            <div class="flex h-44 items-center justify-center bg-gradient-to-br from-emerald-900/60 to-slate-900">
+              <img src="images/libraria.jpg" alt="" class="h-full w-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+              <span class="text-lg font-bold text-emerald-300/80">Libraria</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex flex-wrap gap-2">
+                <span class="rounded bg-emerald-500/20 px-2 py-0.5 text-xs text-emerald-300">PHP</span>
+                <span class="rounded bg-emerald-500/20 px-2 py-0.5 text-xs text-emerald-300">jQuery</span>
+              </div>
+              <h3 class="mt-3 font-bold text-white">Libraria Library System</h3>
+              <p class="mt-2 flex-1 text-sm text-slate-400">Library workflows, admin charts, DSDM, Bootstrap + MySQL.</p>
+              <p class="mt-2 text-xs text-slate-500">Jan 2025 – May 2025 · NCC L5</p>
+              <div class="mt-4 flex gap-2">
+                <a href="#" data-project="libraria" class="project-github rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-indigo-500">GitHub</a>
+                <a href="#" data-project="libraria" class="project-demo rounded-lg border border-white/20 px-3 py-1.5 text-xs font-semibold text-slate-300">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-slate-800/40 transition hover:border-indigo-500/40">
+            <div class="flex h-44 items-center justify-center bg-gradient-to-br from-amber-900/60 to-slate-900">
+              <img src="images/smcworld.jpg" alt="" class="h-full w-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+              <span class="text-lg font-bold text-amber-300/80">SMCWorld</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5">
+              <div class="flex flex-wrap gap-2">
+                <span class="rounded bg-amber-500/20 px-2 py-0.5 text-xs text-amber-300">PHP</span>
+                <span class="rounded bg-amber-500/20 px-2 py-0.5 text-xs text-amber-300">MySQL</span>
+              </div>
+              <h3 class="mt-3 font-bold text-white">SMCWorld Campaign Website</h3>
+              <p class="mt-2 flex-1 text-sm text-slate-400">Public/admin PHP site with CRUD, reCAPTCHA, responsive CSS.</p>
+              <p class="mt-2 text-xs text-slate-500">Jul 2024 – Dec 2024</p>
+              <div class="mt-4 flex gap-2">
+                <a href="#" data-project="smcworld" class="project-github rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-indigo-500">GitHub</a>
+                <a href="#" data-project="smcworld" class="project-demo rounded-lg border border-white/20 px-3 py-1.5 text-xs font-semibold text-slate-300">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-slate-800/40 transition hover:border-indigo-500/40 sm:col-span-2">
+            <div class="flex h-44 items-center justify-center bg-gradient-to-br from-cyan-900/60 to-slate-900">
+              <img src="images/camping.jpg" alt="" class="h-full w-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+              <span class="text-lg font-bold text-cyan-300/80">K Camping World</span>
+            </div>
+            <div class="flex flex-1 flex-col p-5 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
+              <div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded bg-cyan-500/20 px-2 py-0.5 text-xs text-cyan-300">HTML</span>
+                  <span class="rounded bg-cyan-500/20 px-2 py-0.5 text-xs text-cyan-300">CSS</span>
+                </div>
+                <h3 class="mt-3 font-bold text-white">K Camping World E-Commerce</h3>
+                <p class="mt-2 text-sm text-slate-400">Responsive multi-page site, W3C validation, YouTube/Maps/PDF embeds.</p>
+                <p class="mt-2 text-xs text-slate-500">NCC L4</p>
+              </div>
+              <div class="mt-4 flex shrink-0 gap-2 sm:mt-0">
+                <a href="#" data-project="camping" class="project-github rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-indigo-500">GitHub</a>
+                <a href="#" data-project="camping" class="project-demo rounded-lg border border-white/20 px-3 py-1.5 text-xs font-semibold text-slate-300">Demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <details class="mt-10 rounded-2xl border border-white/10 bg-slate-800/30 p-6">
+          <summary class="cursor-pointer font-semibold text-white">More projects (Mobile, Analysis, Database)</summary>
+          <ul class="mt-4 space-y-3 text-sm text-slate-400">
+            <li><strong class="text-slate-200">M-Hike</strong> — Kotlin & React Native hiking apps (Aug–Dec 2025)</li>
+            <li><strong class="text-slate-200">Android Portfolio</strong> — Calculator, Contact Manager, Image Viewer</li>
+            <li><strong class="text-slate-200">Nature Explore</strong> — HCI tablet prototype (Axure RP)</li>
+            <li><strong class="text-slate-200">Bright Care / Wellcome / Infinity Games / GeekUp</strong> — Analysis & design projects</li>
+            <li><strong class="text-slate-200">Walmart DB, Fitness Tracker, McDonald's DB</strong> — SQL & desktop projects</li>
           </ul>
-        </article>
-      </section>
+        </details>
+      </div>
+    </section>
 
-      <section class="main-section" id="analysis">
-        <h2 class="main-title">Selected Analysis & Design Projects</h2>
-        <ul class="analysis-list">
-          <li><strong>Bright Care Health Ltd</strong> — Telehealth Platform Analysis | Greenwich (Sep 2025 – Dec 2025)<br>Agile requirements, MoSCoW, GDPR, privacy-by-design, RBAC.</li>
-          <li><strong>Wellcome Housing Association</strong> — Network Security Analysis | NCC L5 (Mar 2025 – May 2025)<br>Risk assessment; VPN, firewall, DMZ, IDS, MFA, encryption.</li>
-          <li><strong>Infinity Games</strong> — Information Systems Analysis | NCC L5 (Sep 2024 – Dec 2024)<br>CATWOE, Rich Picture, PEST, business process modelling.</li>
-          <li><strong>GeekUp</strong> — Agile Development Planning | NCC L5 (Jan 2025 – Apr 2025)<br>DSDM planning, user stories, timeboxing, UML, MVP.</li>
-          <li><strong>Gotham City College</strong> — Hybrid Teaching Network Design | NCC L4 (Jan 2024 – Apr 2024)<br>VLAN/WiFi 6 topology, VPN, security controls.</li>
-        </ul>
-      </section>
+    <!-- Education -->
+    <section id="education" class="py-20">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <p class="text-sm font-semibold uppercase tracking-widest text-indigo-400">Education</p>
+        <h2 class="mt-2 text-3xl font-bold text-white sm:text-4xl">Academic background</h2>
+        <div class="mt-10 space-y-4">
+          <div class="rounded-xl border border-white/10 bg-slate-900/80 p-6">
+            <div class="flex flex-wrap items-start justify-between gap-2">
+              <h3 class="font-bold text-white">BSc (Hons) Computing</h3>
+              <span class="text-sm text-indigo-400">Jul 2025 – Present</span>
+            </div>
+            <p class="text-slate-400">University of Greenwich · KMD College · Final Year (Result Pending)</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-slate-900/80 p-6">
+            <div class="flex flex-wrap items-start justify-between gap-2">
+              <h3 class="font-bold text-white">Level 5 Diploma in Computing (IT)</h3>
+              <span class="text-sm text-indigo-400">Jul 2024 – Jul 2025</span>
+            </div>
+            <p class="text-slate-400">NCC Education · Grade A</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-slate-900/80 p-6">
+            <div class="flex flex-wrap items-start justify-between gap-2">
+              <h3 class="font-bold text-white">Level 4 Diploma in Computing (IT)</h3>
+              <span class="text-sm text-indigo-400">Jul 2023 – Jul 2024</span>
+            </div>
+            <p class="text-slate-400">NCC Education · Grade A</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-slate-900/80 p-6">
+            <div class="flex flex-wrap items-start justify-between gap-2">
+              <h3 class="font-bold text-white">Level 3 Diploma in Computing (IT)</h3>
+              <span class="text-sm text-indigo-400">Jan 2023 – Jul 2023</span>
+            </div>
+            <p class="text-slate-400">NCC Education · Grade A</p>
+          </div>
+        </div>
+        <div class="mt-8">
+          <h3 class="font-semibold text-white">Certifications</h3>
+          <ul class="mt-3 flex flex-wrap gap-2">
+            <li class="rounded-lg border border-white/10 px-3 py-1.5 text-xs text-slate-400">Vue + Laravel Full Stack · Oct 2025</li>
+            <li class="rounded-lg border border-white/10 px-3 py-1.5 text-xs text-slate-400">Git & GitHub Intermediate · Sep 2025</li>
+            <li class="rounded-lg border border-white/10 px-3 py-1.5 text-xs text-slate-400">Programming Fundamentals · KMD · Jun 2024</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <section class="main-section" id="more">
-        <h2 class="main-title">Additional Academic Projects</h2>
-        <ul class="more-list">
-          <li><strong>Walmart Retail Sales Database (L5)</strong> — SQL Server, ERD, 1NF–3NF, joins, views, reporting</li>
-          <li><strong>Fitness Tracker Desktop App (L4)</strong> — C# WinForms + SQL Server</li>
-          <li><strong>McDonald’s Restaurant Database (L4)</strong> — SQL relational design</li>
-          <li><strong>K Camping World (RCC) (L4)</strong> — Responsive HTML/CSS e-commerce</li>
-          <li><strong>Fordley Car Parking Office System (L4)</strong> — Excel VBA, mail merge, ERD</li>
-          <li><strong>Connect 4 Game (L3)</strong> — VB.NET WinForms</li>
-          <li><strong>Computer Systems Portfolio (L4)</strong> — Windows 10, troubleshooting, maintenance</li>
-        </ul>
-      </section>
+    <!-- Contact -->
+    <section id="contact" class="border-t border-white/10 bg-slate-900/50 py-20">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-indigo-900/40 to-slate-900 p-8 sm:p-12">
+          <h2 class="text-3xl font-bold text-white">Let's work together</h2>
+          <p class="mt-3 text-slate-400">Open to junior web developer roles and graduate opportunities.</p>
+          <div class="mt-8 grid gap-4 sm:grid-cols-2">
+            <a href="mailto:kyawmyohtay2004@gmail.com" class="rounded-xl border border-white/10 bg-slate-950/50 p-4 hover:border-indigo-500/50">
+              <p class="text-xs font-medium uppercase text-indigo-400">Email</p>
+              <p class="mt-1 text-sm text-white">kyawmyohtay2004@gmail.com</p>
+            </a>
+            <a href="tel:+959405552491" class="rounded-xl border border-white/10 bg-slate-950/50 p-4 hover:border-indigo-500/50">
+              <p class="text-xs font-medium uppercase text-indigo-400">Phone</p>
+              <p class="mt-1 text-sm text-white">+95 940 555 2491</p>
+            </a>
+            <a href="https://www.linkedin.com/in/kyaw-myo-htay-117b47360/" target="_blank" rel="noopener" class="rounded-xl border border-white/10 bg-slate-950/50 p-4 hover:border-indigo-500/50">
+              <p class="text-xs font-medium uppercase text-indigo-400">LinkedIn</p>
+              <p class="mt-1 text-sm text-white">kyaw-myo-htay-117b47360</p>
+            </a>
+            <div class="rounded-xl border border-white/10 bg-slate-950/50 p-4">
+              <p class="text-xs font-medium uppercase text-indigo-400">Location</p>
+              <p class="mt-1 text-sm text-white">Botahtaung Township, Yangon, Myanmar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-      <footer class="main-footer">
-        <p>&copy; <span id="year"></span> Kyaw Myo Htay · Portfolio</p>
-        <a href="#objective" class="back-top">Back to top ↑</a>
-      </footer>
-    </main>
-  </div>
+  <footer class="border-t border-white/10 py-8">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-6 lg:px-8">
+      <p class="text-sm text-slate-500">&copy; <span id="year"></span> Kyaw Myo Htay. Built with Tailwind CSS.</p>
+      <a href="#home" class="text-sm font-medium text-indigo-400 hover:text-indigo-300">Back to top ↑</a>
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>

@@ -1,33 +1,31 @@
-# Professional Portfolio — Kyaw Myo Htay
+# Portfolio — Kyaw Myo Htay
 
-Modern dark-theme developer portfolio (HTML / CSS / JavaScript).
+Professional developer portfolio built with **Tailwind CSS** (CDN).
 
-## Preview locally
+## Preview
 
-Open `index.html` in Chrome/Edge, or use **Live Server** in VS Code.
+Open `index.html` in your browser.
 
-## Customize (required for interview)
+## Customize
 
-| File | What to change |
-|------|----------------|
-| `images/profile.jpg` | Your professional photo (square, min 400×400) |
-| `images/*.jpg` | Project screenshots (portal, libraria, smcworld, camping, elitearticles) |
-| `js/main.js` → `PROJECT_LINKS` | Real GitHub & live demo URLs per project |
+Edit `js/main.js` → `PROJECT_LINKS` with real GitHub and demo URLs.
 
-## Deploy (GitHub Pages)
+Add screenshots to `images/`:
+- `profile.jpg`
+- `portal.jpg`, `elitearticles.jpg`, `libraria.jpg`, `smcworld.jpg`, `camping.jpg`
 
-1. Create repo `kyawmyohtay-portfolio`
-2. Upload all files in this folder
-3. Settings → Pages → Deploy from `main` branch
-4. Add URL to CV and LinkedIn
+## Tailwind setup
 
-## Structure
+This project uses Tailwind via CDN for simplicity (no npm build).
 
+For production, you can migrate to:
+
+```bash
+npm init -y
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
 ```
-portfolio/
-├── index.html
-├── css/style.css
-├── js/main.js
-├── images/
-└── README.md
-```
+
+## Deploy
+
+Upload folder to GitHub Pages or Netlify.
