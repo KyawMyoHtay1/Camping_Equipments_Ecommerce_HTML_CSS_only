@@ -3,13 +3,20 @@
   to { opacity: 1; transform: translateY(0); }
 }
 .page-enter { animation: fade-up 0.5s ease-out both; }
+
 .card-lift {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .card-lift:hover {
   transform: translateY(-4px);
+}
+html:not(.dark) .card-lift:hover {
+  box-shadow: 0 12px 40px -12px rgba(99, 102, 241, 0.2);
+}
+html.dark .card-lift:hover {
   box-shadow: 0 12px 40px -12px rgba(99, 102, 241, 0.25);
 }
+
 .project-card-media {
   height: 10rem;
   overflow: hidden;
@@ -22,3 +29,8 @@
   transition: transform 0.5s ease;
 }
 .group:hover .project-card-media img { transform: scale(1.05); }
+
+/* Theme toggle icons */
+[data-theme-icon] { display: none; }
+html:not(.dark) [data-theme-icon="sun"] { display: block; }
+html.dark [data-theme-icon="moon"] { display: block; }
