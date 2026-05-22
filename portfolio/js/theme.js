@@ -14,14 +14,6 @@ window.PortfolioTheme = {
   toggle() {
     this.set(this.get() === "dark" ? "light" : "dark");
   },
-  bindToggle(btn) {
-    if (!btn || btn.dataset.themeBound) return;
-    btn.dataset.themeBound = "1";
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      this.toggle();
-    });
-  },
   init() {
     const stored = localStorage.getItem("portfolio-theme");
     if (stored === "light" || stored === "dark") {

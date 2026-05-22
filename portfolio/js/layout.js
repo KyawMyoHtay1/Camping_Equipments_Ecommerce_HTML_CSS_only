@@ -65,8 +65,6 @@
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  window.PortfolioTheme?.bindToggle(document.getElementById("themeToggle"));
-
   const navToggle = document.getElementById("navToggle");
   const navMobile = document.getElementById("navMobile");
   navToggle?.addEventListener("click", () => navMobile?.classList.toggle("hidden"));
