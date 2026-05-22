@@ -8,6 +8,7 @@
     { id: "about", href: base + "about.html", label: "About" },
     { id: "skills", href: base + "skills.html", label: "Skills" },
     { id: "projects", href: base + "projects.html", label: "Projects" },
+    { id: "cv", href: base + "cv.html", label: "CV" },
     { id: "education", href: base + "education.html", label: "Education" },
     { id: "contact", href: base + "contact.html", label: "Contact" },
   ];

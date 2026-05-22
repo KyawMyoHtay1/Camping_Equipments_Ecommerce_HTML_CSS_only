@@ -11,8 +11,9 @@ Multi-page **junior web developer** portfolio (Tailwind CSS, light/dark mode).
 | Skills | `skills.html` |
 | Projects | `projects.html` |
 | Project detail | `project.html?id=portal` |
+| CV (PDF viewer) | `cv.html` |
 | Education | `education.html` |
-| Contact | `contact.html` |
+| Contact | `contact.html` — includes CV preview |
 
 ## Preview locally
 
@@ -29,6 +30,7 @@ Then visit `http://localhost:8080/`
 - **GitHub links:** `js/main.js` → `PROJECT_LINKS`
 - **Project text:** `js/projects-data.js`
 - **Profile photo:** `images/profile.jpg`
+- **CV PDF:** `documents/Kyaw_Myo_Htay_CV.pdf` (required for download/viewer)
 
 ## Deploy (recommended)
 

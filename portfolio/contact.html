@@ -23,6 +23,24 @@
         I respond quickly — email or LinkedIn work best.
       </p>
 
+      <!-- CV download & inline viewer -->
+      <section class="mt-10 rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 dark:border-white/10 dark:bg-slate-900/80">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h2 class="text-xl font-bold text-gray-900 dark:text-white">Resume (CV)</h2>
+            <p class="mt-1 text-sm text-gray-600 dark:text-slate-400">Preview below or download the PDF.</p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a data-cv-download href="#" class="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500">Download PDF</a>
+            <a data-cv-view href="cv.html" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-100 dark:border-white/20 dark:text-slate-200 dark:hover:bg-white/5">Full page view</a>
+            <a data-cv-open-tab href="#" class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-100 dark:border-white/20 dark:text-slate-200 dark:hover:bg-white/5">Open in tab</a>
+          </div>
+        </div>
+        <div id="cvViewerRoot" class="cv-viewer-embed mt-6">
+          <iframe id="cvPdfFrame" class="cv-pdf-frame hidden w-full rounded-xl border border-gray-200 dark:border-white/10" title="CV PDF preview"></iframe>
+        </div>
+      </section>
+
       <div class="mt-12 grid gap-6 lg:grid-cols-2">
         <div class="space-y-4">
           <a href="mailto:kyawmyohtay2004@gmail.com" class="group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-6 transition hover:border-indigo-400 hover:bg-gray-50 dark:border-white/10 dark:bg-slate-900/80 dark:hover:border-indigo-500/50 dark:hover:bg-slate-800">
@@ -90,6 +108,7 @@
   </main>
 
   <div id="site-footer"></div>
+  <script src="js/cv.js"></script>
   <script src="js/theme.js"></script>
   <script src="js/layout.js" data-base=""></script>
 </body>

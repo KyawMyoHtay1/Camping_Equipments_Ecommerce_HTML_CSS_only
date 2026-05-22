@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View and download Kyaw Myo Htay's CV (PDF).">
+  <title>CV | Kyaw Myo Htay</title>
+  <script src="js/theme-init.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="js/theme-config.js"></script>
+</head>
+<body data-page="cv" class="min-h-screen bg-gray-50 font-sans text-gray-900 antialiased dark:bg-slate-950 dark:text-slate-100">
+  <div id="site-header"></div>
+
+  <main class="page-enter mx-auto max-w-6xl px-4 pb-16 pt-28 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Resume</p>
+        <h1 class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">Curriculum Vitae</h1>
+        <p class="mt-2 text-sm text-gray-600 dark:text-slate-400">View online or download for recruiters.</p>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <a data-cv-download href="#" class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          Download PDF
+        </a>
+        <a data-cv-open-tab href="#" class="inline-flex items-center gap-2 rounded-xl border border-gray-300 px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-gray-100 dark:border-white/20 dark:text-slate-200 dark:hover:bg-white/5">
+          Open in new tab
+        </a>
+        <a href="contact.html" class="inline-flex rounded-xl border border-gray-300 px-4 py-2.5 text-sm font-semibold text-gray-800 hover:bg-gray-100 dark:border-white/20 dark:text-slate-200 dark:hover:bg-white/5">Contact</a>
+      </div>
+    </div>
+
+    <div id="cvViewerRoot" class="cv-viewer-wrap mt-8">
+      <iframe
+        id="cvPdfFrame"
+        class="cv-pdf-frame hidden w-full rounded-2xl border border-gray-200 bg-white dark:border-white/10 dark:bg-slate-900"
+        title="Kyaw Myo Htay CV PDF"
+      ></iframe>
+    </div>
+
+    <p class="mt-4 text-center text-xs text-gray-500 dark:text-slate-500">
+      PDF not showing? Use <strong>Download PDF</strong> or open on a desktop browser.
+    </p>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/cv.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/layout.js" data-base=""></script>
+</body>
+</html>

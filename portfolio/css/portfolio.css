@@ -54,3 +54,20 @@ html.dark body {
   background-color: #020617;
   color: #f1f5f9;
 }
+
+/* CV PDF viewer */
+.cv-pdf-frame {
+  height: min(82vh, 900px);
+  min-height: 480px;
+}
+.cv-viewer-embed .cv-pdf-frame {
+  height: min(70vh, 720px);
+  min-height: 400px;
+}
+@media (max-width: 640px) {
+  .cv-pdf-frame,
+  .cv-viewer-embed .cv-pdf-frame {
+    min-height: 360px;
+    height: 65vh;
+  }
+}
