@@ -3,416 +3,292 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kyaw Myo Htay — Full Stack & Web Developer. PHP, Laravel, Vue.js, JavaScript. Portfolio of academic and production-style projects.">
-  <meta name="author" content="Kyaw Myo Htay">
-  <title>Kyaw Myo Htay | Web Developer Portfolio</title>
+  <meta name="description" content="Kyaw Myo Htay — Junior Web Developer. Portfolio aligned with professional CV. PHP, Laravel, Vue.js, JavaScript.">
+  <title>Kyaw Myo Htay | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="page-bg" aria-hidden="true"></div>
+  <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="overlay" aria-hidden="true"></div>
 
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#home" class="brand">
-        <span class="brand-mark">K</span>
-        <span class="brand-text">Kyaw Myo Htay</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-menu">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#experience" class="nav-link">Education</a></li>
-        <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section id="home" class="hero">
-      <div class="container hero-inner">
-        <div class="hero-content reveal">
-          <div class="status-pill">
-            <span class="status-dot"></span>
-            Available for opportunities
-          </div>
-          <p class="hero-greeting">Hello, I'm</p>
-          <h1 class="hero-title">
-            <span class="gradient-text">Kyaw Myo Htay</span>
-          </h1>
-          <p class="hero-role">Junior Web Developer · Full Stack Enthusiast</p>
-          <p class="hero-desc">
-            Final-year <strong>BSc (Hons) Computing</strong> student crafting responsive,
-            user-focused web applications with PHP, Laravel, Vue.js, and modern JavaScript.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">
-              <span>View My Work</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="#contact" class="btn btn-ghost">Get In Touch</a>
-          </div>
-          <div class="hero-social">
-            <a href="https://github.com/KyawMyoHtay1" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A8.34 8.34 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/kyaw-myo-htay-117b47360/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="mailto:kyawmyohtay2004@gmail.com" aria-label="Email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
-            </a>
-          </div>
-        </div>
-        <div class="hero-visual reveal reveal-delay">
-          <div class="profile-frame">
-            <div class="profile-glow"></div>
-            <img src="images/profile.jpg" alt="Kyaw Myo Htay" class="profile-img" onerror="this.style.display='none';this.nextElementSibling.classList.add('show');">
-            <div class="profile-fallback">
-              <span>KMH</span>
-            </div>
-          </div>
-          <div class="floating-card card-1">
-            <span class="fc-icon">&#60;/&#62;</span>
-            <div>
-              <strong>5+</strong>
-              <span>Web Projects</span>
-            </div>
-          </div>
-          <div class="floating-card card-2">
-            <span class="fc-icon">A</span>
-            <div>
-              <strong>Grade A</strong>
-              <span>NCC Diplomas</span>
-            </div>
-          </div>
-        </div>
+  <div class="layout">
+    <!-- Sidebar — matches CV left column -->
+    <aside class="sidebar" id="sidebar">
+      <div class="profile-wrap">
+        <img src="images/profile.jpg" alt="Kyaw Myo Htay" class="profile-photo" width="200" height="200">
       </div>
-      <div class="hero-scroll">
-        <a href="#about" aria-label="Scroll down">
-          <span>Scroll</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-        </a>
-      </div>
-    </section>
 
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-label">About Me</span>
-          <h2 class="section-title">Building digital solutions with purpose</h2>
+      <section class="side-block">
+        <h2 class="side-title">Contact</h2>
+        <ul class="side-list">
+          <li><span class="label">Phone</span><a href="tel:+959405552491">+95 940 555 2491</a></li>
+          <li><span class="label">E-Mail</span><a href="mailto:kyawmyohtay2004@gmail.com">kyawmyohtay2004@gmail.com</a></li>
+          <li><span class="label">Address</span><span>No.23, First Floor, 44th Street, Botahtaung Township, Yangon</span></li>
+          <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/kyaw-myo-htay-117b47360/" target="_blank" rel="noopener">linkedin.com/in/kyaw-myo-htay-117b47360</a></li>
+          <li><span class="label">GitHub</span><a href="https://github.com/KyawMyoHtay1" target="_blank" rel="noopener">github.com/KyawMyoHtay1</a></li>
+        </ul>
+      </section>
+
+      <section class="side-block">
+        <h2 class="side-title">Personal Details</h2>
+        <ul class="side-list">
+          <li><span class="label">DOB</span><span>26 September 2004</span></li>
+          <li><span class="label">Nationality</span><span>Myanmar</span></li>
+          <li><span class="label">Gender</span><span>Male</span></li>
+        </ul>
+      </section>
+
+      <section class="side-block">
+        <h2 class="side-title">Education</h2>
+        <div class="edu-item">
+          <h3>University of Greenwich</h3>
+          <p class="edu-degree">BSc (Hons) Computing</p>
+          <p class="edu-meta">Jul 2025 – Present</p>
+          <p class="edu-meta">Final Year — In Progress (Result Pending)</p>
         </div>
-        <div class="about-grid reveal">
-          <div class="about-text">
-            <p>
-              I'm a Computing student at <strong>University of Greenwich (KMD College)</strong>
-              with a strong foundation from NCC Education (Level 3–5, all Grade A). I specialize
-              in full-stack web development — from database design to polished front-end interfaces.
-            </p>
-            <p>
-              I've led Agile team deliveries, built multi-role systems with Laravel and Vue, and
-              shipped PHP applications with real-world workflows. I'm motivated to join a professional
-              team, learn from senior developers, and grow as a long-term software engineer.
-            </p>
-            <ul class="about-highlights">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-                Team Leader — EliteArticles (Scrum / Jira)
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-                Full Stack — University Academic Portal
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-                Vue + Laravel certified (Creative Coder Myanmar)
-              </li>
-            </ul>
-          </div>
-          <div class="about-stats">
-            <div class="stat-box">
-              <span class="stat-num">3+</span>
-              <span class="stat-label">Years in Computing</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-num">10+</span>
-              <span class="stat-label">Academic Projects</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-num">A</span>
-              <span class="stat-label">NCC L3 / L4 / L5 Grades</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-num">EN</span>
-              <span class="stat-label">Intermediate · MM Native</span>
-            </div>
-          </div>
+        <div class="edu-item">
+          <h3>NCC Education</h3>
+          <p class="edu-degree">Level 5 Diploma in Computing (IT)</p>
+          <p class="edu-meta">Jul 2024 – Jul 2025 · Grade: A</p>
+          <p class="edu-note">Distinctions: Computer Project, Database Design & Development, Dynamic Websites, Information System Analysis, Agile Development</p>
+          <p class="edu-note">Merit: Network Security and Cryptography</p>
         </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section section-dark">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-label">Expertise</span>
-          <h2 class="section-title">Technical skills</h2>
+        <div class="edu-item">
+          <h3>NCC Education</h3>
+          <p class="edu-degree">Level 4 Diploma in Computing (IT)</p>
+          <p class="edu-meta">Jul 2023 – Jul 2024 · Grade: A</p>
         </div>
-        <div class="skills-wrap reveal">
-          <div class="skill-group">
-            <h3>Frontend</h3>
-            <div class="skill-tags">
-              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>TypeScript</span>
-              <span>jQuery</span><span>Bootstrap</span><span>Tailwind CSS</span><span>Vue.js</span>
-              <span>Responsive UI</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3>Backend</h3>
-            <div class="skill-tags">
-              <span>PHP</span><span>Laravel</span><span>Inertia.js</span><span>REST APIs</span>
-              <span>MySQL</span><span>SQL Server</span><span>SQLite</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3>Tools & Practices</h3>
-            <div class="skill-tags">
-              <span>Git</span><span>GitHub</span><span>VS Code</span><span>XAMPP</span>
-              <span>Postman</span><span>Jira</span><span>PHPUnit</span><span>Agile / Scrum</span>
-              <span>DSDM</span><span>UML</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3>Also experienced</h3>
-            <div class="skill-tags">
-              <span>Kotlin</span><span>React Native</span><span>C#</span><span>Axure RP</span>
-              <span>Stripe API</span>
-            </div>
-          </div>
+        <div class="edu-item">
+          <h3>NCC Education</h3>
+          <p class="edu-degree">Level 3 Diploma in Computing (IT)</p>
+          <p class="edu-meta">Jan 2023 – Jul 2023 · Grade: A</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-label">Portfolio</span>
-          <h2 class="section-title">Featured projects</h2>
-          <p class="section-desc">Production-style academic work demonstrating end-to-end development.</p>
-        </div>
-        <div class="projects-grid">
-          <article class="project-tile reveal" data-project="portal">
-            <div class="project-thumb">
-              <img src="images/portal.jpg" alt="University Academic Portal" onerror="this.classList.add('hidden');this.parentElement.classList.add('no-img');">
-              <div class="thumb-placeholder" style="--hue: 220">Academic Portal</div>
-              <div class="project-overlay">
-                <a href="#" class="overlay-btn project-demo" data-project="portal">Live Demo</a>
-                <a href="#" class="overlay-btn overlay-btn-light project-github" data-project="portal">Source Code</a>
-              </div>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span>Laravel</span><span>Vue.js</span><span>MySQL</span>
-              </div>
-              <h3>University Academic Portal</h3>
-              <p>Multi-role portal with enrolment, grades, Stripe payments, RBAC, and queue notifications.</p>
-              <span class="project-date">Aug 2025 – Apr 2026 · Final Year FYP</span>
-            </div>
-          </article>
+      <section class="side-block">
+        <h2 class="side-title">Technical Skills</h2>
+        <div class="skill-row"><strong>Programming</strong><p>PHP, TypeScript, JavaScript, Kotlin, Java, SQL, C#</p></div>
+        <div class="skill-row"><strong>Frontend</strong><p>HTML, CSS, Bootstrap, Tailwind CSS, Vue.js</p></div>
+        <div class="skill-row"><strong>Backend</strong><p>Laravel, Pure PHP, REST API integration</p></div>
+        <div class="skill-row"><strong>Mobile</strong><p>React Native, Expo, Android, Kotlin</p></div>
+        <div class="skill-row"><strong>Database</strong><p>MySQL, SQLite, SQL Server, Room</p></div>
+        <div class="skill-row"><strong>Engineering</strong><p>Agile DSDM, Scrum, UML, Requirements</p></div>
+        <div class="skill-row"><strong>UI/UX</strong><p>Axure RP 11, HCI, Wireframing</p></div>
+        <div class="skill-row"><strong>Tools</strong><p>Git, GitHub, Postman, XAMPP, VS Code, Jira</p></div>
+      </section>
 
-          <article class="project-tile reveal" data-project="elitearticles">
-            <div class="project-thumb">
-              <img src="images/elitearticles.jpg" alt="EliteArticles" onerror="this.classList.add('hidden');this.parentElement.classList.add('no-img');">
-              <div class="thumb-placeholder" style="--hue: 280">EliteArticles</div>
-              <div class="project-overlay">
-                <a href="#" class="overlay-btn project-demo" data-project="elitearticles">Live Demo</a>
-                <a href="#" class="overlay-btn overlay-btn-light project-github" data-project="elitearticles">Source Code</a>
-              </div>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span>Laravel</span><span>PHP</span><span>Jira</span>
-              </div>
-              <h3>EliteArticles Magazine System</h3>
-              <p>Team-led submission & review workflow with RBAC, ZIP exports, and Scrum delivery.</p>
-              <span class="project-date">Jan 2026 – Apr 2026 · Team Leader</span>
-            </div>
-          </article>
+      <section class="side-block">
+        <h2 class="side-title">Soft Skills</h2>
+        <ul class="tag-list">
+          <li>Communication</li><li>Problem-Solving</li><li>Teamwork</li><li>Leadership</li>
+          <li>Time Management</li><li>Analytical Thinking</li><li>Adaptability</li>
+        </ul>
+      </section>
 
-          <article class="project-tile reveal" data-project="libraria">
-            <div class="project-thumb">
-              <img src="images/libraria.jpg" alt="Libraria" onerror="this.classList.add('hidden');this.parentElement.classList.add('no-img');">
-              <div class="thumb-placeholder" style="--hue: 160">Libraria</div>
-              <div class="project-overlay">
-                <a href="#" class="overlay-btn project-demo" data-project="libraria">Live Demo</a>
-                <a href="#" class="overlay-btn overlay-btn-light project-github" data-project="libraria">Source Code</a>
-              </div>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span>PHP</span><span>jQuery</span><span>MySQL</span>
-              </div>
-              <h3>Libraria Library System</h3>
-              <p>Full library workflows — borrowing, fines, admin dashboards, and reporting charts.</p>
-              <span class="project-date">Jan 2025 – May 2025 · NCC L5</span>
-            </div>
-          </article>
+      <section class="side-block">
+        <h2 class="side-title">Languages</h2>
+        <ul class="side-list plain">
+          <li>English — Intermediate</li>
+          <li>Myanmar — Native</li>
+        </ul>
+      </section>
 
-          <article class="project-tile reveal" data-project="smcworld">
-            <div class="project-thumb">
-              <img src="images/smcworld.jpg" alt="SMCWorld" onerror="this.classList.add('hidden');this.parentElement.classList.add('no-img');">
-              <div class="thumb-placeholder" style="--hue: 30">SMCWorld</div>
-              <div class="project-overlay">
-                <a href="#" class="overlay-btn project-demo" data-project="smcworld">Live Demo</a>
-                <a href="#" class="overlay-btn overlay-btn-light project-github" data-project="smcworld">Source Code</a>
-              </div>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span>PHP</span><span>CRUD</span><span>Admin Panel</span>
-              </div>
-              <h3>SMCWorld Campaign Website</h3>
-              <p>Dynamic public & admin site with auth, search, reCAPTCHA, and responsive CSS.</p>
-              <span class="project-date">Jul 2024 – Dec 2024 · NCC L5</span>
-            </div>
-          </article>
+      <section class="side-block">
+        <h2 class="side-title">Certifications</h2>
+        <ul class="cert-list">
+          <li>Vue + Laravel Full Stack · Creative Coder (Oct 2025)</li>
+          <li>Git & GitHub Intermediate · Creative Coder (Sep 2025)</li>
+          <li>Programming Fundamentals · KMD (Jun 2024)</li>
+        </ul>
+      </section>
+    </aside>
 
-          <article class="project-tile reveal" data-project="camping">
-            <div class="project-thumb">
-              <img src="images/camping.jpg" alt="K Camping World" onerror="this.classList.add('hidden');this.parentElement.classList.add('no-img');">
-              <div class="thumb-placeholder" style="--hue: 120">K Camping World</div>
-              <div class="project-overlay">
-                <a href="#" class="overlay-btn project-demo" data-project="camping">Live Demo</a>
-                <a href="#" class="overlay-btn overlay-btn-light project-github" data-project="camping">Source Code</a>
-              </div>
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span>HTML</span><span>CSS</span><span>Responsive</span>
-              </div>
-              <h3>K Camping World E-Commerce</h3>
-              <p>Multi-page responsive storefront with slideshows, maps, and W3C-validated markup.</p>
-              <span class="project-date">NCC L4 · Winter 2023</span>
-            </div>
-          </article>
+    <!-- Main — matches CV right column -->
+    <main class="main" id="main">
+      <header class="main-header">
+        <h1>KYAW MYO HTAY</h1>
+        <p class="role-line">Junior Web Developer · Computing Student</p>
+      </header>
 
-          <article class="project-tile reveal project-tile-accent" data-project="more">
-            <div class="project-more-inner">
-              <h3>More work available</h3>
-              <p>Mobile apps (M-Hike), database systems, HCI prototypes, and security analysis projects.</p>
-              <a href="https://github.com/KyawMyoHtay1" class="btn btn-primary" target="_blank" rel="noopener">View GitHub</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+      <section class="main-section" id="objective">
+        <h2 class="main-title">Objective</h2>
+        <p>
+          Dedicated and adaptable Computing student with practical experience in web development,
+          mobile application development, database design, and system analysis through academic and
+          software engineering projects. Proficient in building responsive applications using modern
+          technologies and applying Agile development practices, teamwork, and problem-solving skills.
+          Eager to contribute technical knowledge and analytical abilities to a professional IT environment
+          while continuing to develop expertise in software and business technology solutions.
+        </p>
+      </section>
 
-    <!-- Education -->
-    <section id="experience" class="section section-dark">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-label">Background</span>
-          <h2 class="section-title">Education & certifications</h2>
-        </div>
-        <div class="timeline reveal">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">Jul 2025 – Present</span>
-              <h3>BSc (Hons) Computing</h3>
-              <p class="timeline-org">University of Greenwich · KMD College</p>
-              <p>Final Year — In Progress</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">Jul 2024 – Jul 2025</span>
-              <h3>Level 5 Diploma in Computing (IT)</h3>
-              <p class="timeline-org">NCC Education · Grade A</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">Jul 2023 – Jul 2024</span>
-              <h3>Level 4 Diploma in Computing (IT)</h3>
-              <p class="timeline-org">NCC Education · Grade A</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">Jan 2023 – Jul 2023</span>
-              <h3>Level 3 Diploma in Computing (IT)</h3>
-              <p class="timeline-org">NCC Education · Grade A</p>
-            </div>
-          </div>
-        </div>
-        <div class="certs reveal">
-          <h3 class="certs-title">Certifications</h3>
-          <ul class="certs-list">
-            <li>Vue + Laravel Full Stack · Creative Coder Myanmar (Oct 2025)</li>
-            <li>Git & GitHub Intermediate · Creative Coder Myanmar (Sep 2025)</li>
-            <li>Programming Fundamentals (Java & C#) · KMD College (Jun 2024)</li>
+      <section class="main-section" id="projects">
+        <h2 class="main-title">Experience in Projects</h2>
+
+        <article class="project">
+          <header class="project-head">
+            <h3>University Academic Portal — Vue.js & Laravel</h3>
+            <span class="project-date">Aug 2025 – Apr 2026</span>
+          </header>
+          <p class="project-sub">Individual Final Year Project | University of Greenwich · <em>Full Stack Developer</em></p>
+          <p class="tech-line"><strong>Technologies:</strong> PHP, Laravel, Vue.js, Inertia.js, MySQL, Tailwind CSS, Vite, Git, GitHub, Stripe, PHPUnit</p>
+          <ul>
+            <li>Designed and developed a multi-user University Academic Portal for students, teachers, staff, and guests.</li>
+            <li>Implemented registration, enrolment, grades, assignments, fee payment, timetables, attendance, announcements, messaging, and notifications.</li>
+            <li>Delivered RBAC, relational database design, validation, GPA calculation, search, email verification, and responsive UIs.</li>
+            <li>Integrated Stripe Checkout with webhooks; built queue-backed notifications and scheduled jobs for attendance alerts.</li>
+            <li>Applied Agile DSDM (MoSCoW, timeboxing, usability testing); produced ER diagrams, use cases, sequence/class diagrams, test plans, and LESPI evaluation aligned with BCS standards.</li>
           </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="contact-card reveal">
-          <div class="contact-text">
-            <span class="section-label">Contact</span>
-            <h2 class="section-title">Let's work together</h2>
-            <p>Open to junior web developer roles, internships, and graduate opportunities in Yangon and remote-friendly teams.</p>
+          <div class="project-btns">
+            <a href="#" class="btn btn-dark project-github" data-project="portal">GitHub</a>
+            <a href="#" class="btn btn-outline project-demo" data-project="portal">Live Demo</a>
           </div>
-          <div class="contact-actions">
-            <a href="mailto:kyawmyohtay2004@gmail.com" class="contact-link">
-              <span class="cl-label">Email</span>
-              <span class="cl-value">kyawmyohtay2004@gmail.com</span>
-            </a>
-            <a href="tel:+959405552491" class="contact-link">
-              <span class="cl-label">Phone</span>
-              <span class="cl-value">+95 940 555 2491</span>
-            </a>
-            <a href="https://www.linkedin.com/in/kyaw-myo-htay-117b47360/" class="contact-link" target="_blank" rel="noopener">
-              <span class="cl-label">LinkedIn</span>
-              <span class="cl-value">kyaw-myo-htay</span>
-            </a>
-            <a href="https://github.com/KyawMyoHtay1" class="contact-link" target="_blank" rel="noopener">
-              <span class="cl-label">GitHub</span>
-              <span class="cl-value">KyawMyoHtay1</span>
-            </a>
-            <p class="contact-location">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Botahtaung Township, Yangon, Myanmar
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+        </article>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Kyaw Myo Htay. Crafted with HTML, CSS & JavaScript.</p>
-      <a href="#home" class="back-top" id="backTop" aria-label="Back to top">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-      </a>
-    </div>
-  </footer>
+        <article class="project">
+          <header class="project-head">
+            <h3>EliteArticles — Annual University Magazine System</h3>
+            <span class="project-date">Jan 2026 – Apr 2026</span>
+          </header>
+          <p class="project-sub">Final Year Group Project | University of Greenwich · <em>Team Leader & Backend Developer</em></p>
+          <p class="tech-line"><strong>Technologies:</strong> PHP, Laravel, MySQL, Blade, Git, GitHub, Jira, PHPUnit</p>
+          <ul>
+            <li>Led delivery using Agile Scrum, sprint planning, and coordination via Jira and GitHub.</li>
+            <li>Built authentication, RBAC, contribution workflows, coordinator review, manager reporting (ZIP export), and faculty-scoped guest access.</li>
+            <li>Designed relational schemas, ERDs, and validation; produced user stories, test plans, sitemaps, and class diagrams.</li>
+          </ul>
+          <div class="project-btns">
+            <a href="#" class="btn btn-dark project-github" data-project="elitearticles">GitHub</a>
+            <a href="#" class="btn btn-outline project-demo" data-project="elitearticles">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <header class="project-head">
+            <h3>M-Hike — Native Android Application</h3>
+            <span class="project-date">Aug 2025 – Dec 2025</span>
+          </header>
+          <p class="project-sub">Mobile Application Development Project | University of Greenwich</p>
+          <p class="tech-line"><strong>Technologies:</strong> Kotlin, Android SDK, SQLite, Material Design, XML</p>
+          <ul>
+            <li>Developed a hiking management app with full CRUD for hikes and observations and layered SQLite architecture.</li>
+            <li>Built validation, confirmation screens, advanced search/filter, and RecyclerView lists with Material Design UI.</li>
+            <li>Applied HCI principles using ConstraintLayout, themes, and navigation patterns.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <header class="project-head">
+            <h3>M-Hike — Cross-Platform Application (React Native)</h3>
+            <span class="project-date">Aug 2025 – Dec 2025</span>
+          </header>
+          <p class="project-sub">Mobile Application Development Project | University of Greenwich</p>
+          <p class="tech-line"><strong>Technologies:</strong> TypeScript, React Native, Expo, SQLite, Formik, Yup, React Native Paper</p>
+          <ul>
+            <li>Built a cross-platform hike app with file-based navigation, typed models, and a modular service layer.</li>
+            <li>Integrated GPS, reverse geocoding, camera/gallery capture, and OpenWeatherMap on detail screens.</li>
+            <li>Implemented validated forms and responsive UI for Android, iOS, and Web.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <header class="project-head">
+            <h3>Android Development Portfolio</h3>
+            <span class="project-date">Aug 2025 – Dec 2025</span>
+          </header>
+          <p class="project-sub">Practical Projects | University of Greenwich</p>
+          <p class="tech-line"><strong>Technologies:</strong> Kotlin, Android SDK, Room, RecyclerView, Material Design</p>
+          <ul>
+            <li><strong>Calculator:</strong> arithmetic operations, validation, divide-by-zero handling, Toast feedback, animations.</li>
+            <li><strong>Contact Manager:</strong> Room storage, coroutines, DAO/repository pattern, form validation.</li>
+            <li><strong>Image Viewer:</strong> gallery navigation, fade animations, on-screen image counter.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <header class="project-head">
+            <h3>Libraria — Library Management System</h3>
+            <span class="project-date">Jan 2025 – May 2025</span>
+          </header>
+          <p class="project-sub">Graduation Assignment | NCC Level 5 · <em>Web Developer & Database Designer</em></p>
+          <p class="tech-line"><strong>Technologies:</strong> PHP, MySQL, HTML, CSS, JavaScript, Bootstrap, jQuery</p>
+          <ul>
+            <li>Digitized book, member, staff, borrowing, return, fine, and feedback workflows with admin reporting charts.</li>
+            <li>Designed database schema with use cases, class/sequence diagrams, and functional requirements.</li>
+            <li>Applied DSDM (MoSCoW, timeboxing, SWOT, risk management, LESPI); delivered testing and deployment planning.</li>
+          </ul>
+          <div class="project-btns">
+            <a href="#" class="btn btn-dark project-github" data-project="libraria">GitHub</a>
+            <a href="#" class="btn btn-outline project-demo" data-project="libraria">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <header class="project-head">
+            <h3>SMCWorld — Social Media Campaign Website</h3>
+            <span class="project-date">Jul 2024 – Dec 2024</span>
+          </header>
+          <p class="project-sub">Dynamic Website Development | NCC Level 5 · <em>PHP Web Developer</em></p>
+          <p class="tech-line"><strong>Technologies:</strong> PHP, MySQL, HTML, CSS, JavaScript</p>
+          <ul>
+            <li>Built public and admin interfaces with authentication, registration, contact forms, and search.</li>
+            <li>Implemented CRUD, relational schema, responsive CSS, reCAPTCHA, and Google Translate integration.</li>
+          </ul>
+          <div class="project-btns">
+            <a href="#" class="btn btn-dark project-github" data-project="smcworld">GitHub</a>
+            <a href="#" class="btn btn-outline project-demo" data-project="smcworld">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <header class="project-head">
+            <h3>Nature Explore — HCI Educational Tablet Application</h3>
+            <span class="project-date">Aug 2025 – Dec 2025</span>
+          </header>
+          <p class="project-sub">HCI Project | University of Greenwich · <em>UI/UX Designer & Prototype Developer</em></p>
+          <p class="tech-line"><strong>Technologies:</strong> Axure RP 11, HCI Principles</p>
+          <ul>
+            <li>Designed a mid-fidelity tablet prototype for child-friendly nature learning (quizzes, maps, progress, parent dashboard concepts).</li>
+            <li>Applied accessibility, cognitive psychology, and interaction design; produced user flows, sitemaps, and conceptual diagrams.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="analysis">
+        <h2 class="main-title">Selected Analysis & Design Projects</h2>
+        <ul class="analysis-list">
+          <li><strong>Bright Care Health Ltd</strong> — Telehealth Platform Analysis | Greenwich (Sep 2025 – Dec 2025)<br>Agile requirements, MoSCoW, GDPR, privacy-by-design, RBAC.</li>
+          <li><strong>Wellcome Housing Association</strong> — Network Security Analysis | NCC L5 (Mar 2025 – May 2025)<br>Risk assessment; VPN, firewall, DMZ, IDS, MFA, encryption.</li>
+          <li><strong>Infinity Games</strong> — Information Systems Analysis | NCC L5 (Sep 2024 – Dec 2024)<br>CATWOE, Rich Picture, PEST, business process modelling.</li>
+          <li><strong>GeekUp</strong> — Agile Development Planning | NCC L5 (Jan 2025 – Apr 2025)<br>DSDM planning, user stories, timeboxing, UML, MVP.</li>
+          <li><strong>Gotham City College</strong> — Hybrid Teaching Network Design | NCC L4 (Jan 2024 – Apr 2024)<br>VLAN/WiFi 6 topology, VPN, security controls.</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="more">
+        <h2 class="main-title">Additional Academic Projects</h2>
+        <ul class="more-list">
+          <li><strong>Walmart Retail Sales Database (L5)</strong> — SQL Server, ERD, 1NF–3NF, joins, views, reporting</li>
+          <li><strong>Fitness Tracker Desktop App (L4)</strong> — C# WinForms + SQL Server</li>
+          <li><strong>McDonald’s Restaurant Database (L4)</strong> — SQL relational design</li>
+          <li><strong>K Camping World (RCC) (L4)</strong> — Responsive HTML/CSS e-commerce</li>
+          <li><strong>Fordley Car Parking Office System (L4)</strong> — Excel VBA, mail merge, ERD</li>
+          <li><strong>Connect 4 Game (L3)</strong> — VB.NET WinForms</li>
+          <li><strong>Computer Systems Portfolio (L4)</strong> — Windows 10, troubleshooting, maintenance</li>
+        </ul>
+      </section>
+
+      <footer class="main-footer">
+        <p>&copy; <span id="year"></span> Kyaw Myo Htay · Portfolio</p>
+        <a href="#objective" class="back-top">Back to top ↑</a>
+      </footer>
+    </main>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
