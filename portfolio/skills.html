@@ -5,64 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skills | Kyaw Myo Htay</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <script src="js/theme-config.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } } };</script>
 </head>
-<body data-page="skills" class="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased">
+<body data-page="skills" class="min-h-screen bg-slate-950 font-sans text-slate-100 antialiased">
   <div id="site-header"></div>
-
-  <main class="pt-28 pb-20">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-      <p class="text-sm font-semibold uppercase tracking-widest text-indigo-400">Technical skills</p>
-      <h1 class="mt-2 text-4xl font-bold text-white">Expertise</h1>
-      <p class="mt-4 max-w-2xl text-slate-400">Full stack from your CV — web, mobile, databases, analysis, and security.</p>
-
-      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30 transition">
-          <h2 class="text-sm font-bold uppercase tracking-wider text-indigo-400">Programming</h2>
-          <p class="mt-3 text-slate-300">PHP, TypeScript, JavaScript, Kotlin, Java, SQL, C#</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30 transition">
-          <h2 class="text-sm font-bold uppercase tracking-wider text-indigo-400">Frontend</h2>
-          <p class="mt-3 text-slate-300">HTML, CSS, Bootstrap, Tailwind CSS, Vue.js</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30 transition">
-          <h2 class="text-sm font-bold uppercase tracking-wider text-indigo-400">Backend</h2>
-          <p class="mt-3 text-slate-300">Laravel, Pure PHP, REST API integration</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30 transition">
-          <h2 class="text-sm font-bold uppercase tracking-wider text-emerald-400">Mobile</h2>
-          <p class="mt-3 text-slate-300">React Native, Expo, Android, Kotlin</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30 transition">
-          <h2 class="text-sm font-bold uppercase tracking-wider text-violet-400">Database</h2>
-          <p class="mt-3 text-slate-300">MySQL, SQLite, SQL Server, Room</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30 transition">
-          <h2 class="text-sm font-bold uppercase tracking-wider text-amber-400">Engineering</h2>
-          <p class="mt-3 text-slate-300">Agile DSDM, Scrum, system analysis, UML</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30 transition">
-          <h2 class="text-sm font-bold uppercase tracking-wider text-cyan-400">UI/UX</h2>
-          <p class="mt-3 text-slate-300">Axure RP 11, HCI, responsive design, wireframing</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30 transition">
-          <h2 class="text-sm font-bold uppercase tracking-wider text-slate-400">Tools</h2>
-          <p class="mt-3 text-slate-300">Git, GitHub, Postman, XAMPP, VS Code, Jira, Stripe, Vite, PHPUnit</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30 transition">
-          <h2 class="text-sm font-bold uppercase tracking-wider text-rose-400">Security</h2>
-          <p class="mt-3 text-slate-300">VPN, firewall, VLAN, RBAC, MFA, GDPR concepts</p>
-        </div>
-      </div>
-
-      <div class="mt-12 flex flex-wrap gap-4">
-        <a href="projects.html" class="rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500">View projects →</a>
-        <a href="about.html" class="rounded-xl border border-white/20 px-5 py-2.5 text-sm font-semibold hover:bg-white/5">About me</a>
-      </div>
+  <main class="page-enter mx-auto max-w-6xl px-4 pb-20 pt-28 sm:px-6 lg:px-8">
+    <p class="text-sm font-semibold uppercase tracking-widest text-indigo-400">Technical skills</p>
+    <h1 class="mt-2 text-4xl font-bold text-white">Expertise</h1>
+    <p class="mt-4 max-w-2xl text-slate-400">Full stack — web, mobile, databases, analysis, and security.</p>
+    <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30"><h2 class="text-sm font-bold uppercase tracking-wider text-indigo-400">Programming</h2><p class="mt-3 text-slate-300">PHP, TypeScript, JavaScript, Kotlin, Java, SQL, C#</p></div>
+      <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30"><h2 class="text-sm font-bold uppercase tracking-wider text-indigo-400">Frontend</h2><p class="mt-3 text-slate-300">HTML, CSS, Bootstrap, Tailwind CSS, Vue.js</p></div>
+      <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30"><h2 class="text-sm font-bold uppercase tracking-wider text-indigo-400">Backend</h2><p class="mt-3 text-slate-300">Laravel, Pure PHP, REST API integration</p></div>
+      <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30"><h2 class="text-sm font-bold uppercase tracking-wider text-emerald-400">Mobile</h2><p class="mt-3 text-slate-300">React Native, Expo, Android, Kotlin</p></div>
+      <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30"><h2 class="text-sm font-bold uppercase tracking-wider text-violet-400">Database</h2><p class="mt-3 text-slate-300">MySQL, SQLite, SQL Server, Room</p></div>
+      <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30"><h2 class="text-sm font-bold uppercase tracking-wider text-amber-400">Engineering</h2><p class="mt-3 text-slate-300">Agile DSDM, Scrum, system analysis, UML</p></div>
+      <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30"><h2 class="text-sm font-bold uppercase tracking-wider text-cyan-400">UI/UX</h2><p class="mt-3 text-slate-300">Axure RP 11, HCI, responsive design, wireframing</p></div>
+      <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30"><h2 class="text-sm font-bold uppercase tracking-wider text-slate-400">Tools</h2><p class="mt-3 text-slate-300">Git, GitHub, Postman, XAMPP, VS Code, Jira, Stripe, Vite, PHPUnit</p></div>
+      <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6 hover:border-indigo-500/30"><h2 class="text-sm font-bold uppercase tracking-wider text-rose-400">Security</h2><p class="mt-3 text-slate-300">VPN, firewall, VLAN, RBAC, MFA, GDPR concepts</p></div>
     </div>
+    <a href="projects.html" class="mt-12 inline-block rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500">View projects →</a>
   </main>
-
   <div id="site-footer"></div>
   <script src="js/layout.js" data-base=""></script>
 </body>
