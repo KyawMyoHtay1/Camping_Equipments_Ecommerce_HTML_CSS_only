@@ -1,31 +1,31 @@
 # Portfolio — Kyaw Myo Htay
 
-Professional developer portfolio built with **Tailwind CSS** (CDN).
+Multi-page developer portfolio built with **Tailwind CSS** (CDN).
+
+## Site structure
+
+| Page | File | Content |
+|------|------|---------|
+| Home | `index.html` | Hero, explore cards, featured projects |
+| About | `about.html` | Objective, soft skills, languages |
+| Skills | `skills.html` | Full technical skills from CV |
+| Projects | `projects.html` | Project grid + filters + analysis/other lists |
+| Project detail | `project.html?id=portal` | Single project (dynamic) |
+| Education | `education.html` | Degrees + all certifications |
+| Contact | `contact.html` | Email, phone, LinkedIn, GitHub |
 
 ## Preview
 
-Open `index.html` in your browser.
+Open `index.html` in your browser and use the top navigation.
 
-## Customize
+## Customize GitHub links
 
-Edit `js/main.js` → `PROJECT_LINKS` with real GitHub and demo URLs.
+Edit `js/main.js` → `PROJECT_LINKS` with real repo and demo URLs per project.
 
-Add screenshots to `images/`:
-- `profile.jpg`
-- `portal.jpg`, `elitearticles.jpg`, `libraria.jpg`, `smcworld.jpg`, `camping.jpg`
+## Project content
 
-## Tailwind setup
-
-This project uses Tailwind via CDN for simplicity (no npm build).
-
-For production, you can migrate to:
-
-```bash
-npm init -y
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init
-```
+Edit `js/projects-data.js` to update project titles, bullets, and tech stacks.
 
 ## Deploy
 
-Upload folder to GitHub Pages or Netlify.
+Upload the entire `portfolio/` folder to GitHub Pages or Netlify. Set `index.html` as the entry page.

@@ -62,7 +62,8 @@
   if (headerEl) headerEl.innerHTML = header;
   if (footerEl) footerEl.innerHTML = footer;
 
-  document.getElementById("year").textContent = new Date().getFullYear();
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const toggle = document.getElementById("navToggle");
   const mobile = document.getElementById("navMobile");
