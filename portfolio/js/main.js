@@ -1,6 +1,8 @@
 const PROJECT_LINKS = {
   portal: { github: "https://github.com/KyawMyoHtay1", demo: "#" },
   elitearticles: { github: "https://github.com/KyawMyoHtay1", demo: "#" },
+  "mhike-android": { github: "https://github.com/KyawMyoHtay1", demo: "#" },
+  "mhike-rn": { github: "https://github.com/KyawMyoHtay1", demo: "#" },
   libraria: { github: "https://github.com/KyawMyoHtay1", demo: "#" },
   smcworld: { github: "https://github.com/KyawMyoHtay1", demo: "#" },
   camping: { github: "https://github.com/KyawMyoHtay1", demo: "#" },
