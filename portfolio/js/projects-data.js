@@ -18,7 +18,7 @@ const PROJECTS = {
       "Conducted functional testing, usability testing, risk management analysis, and LESPI evaluation aligned with BCS standards.",
     ],
     github: "portal",
-    demo: "portal",
+    demo: null,
   },
   elitearticles: {
     title: "EliteArticles — Annual University Magazine System",
@@ -37,7 +37,7 @@ const PROJECTS = {
       "Participated in sprint reviews, retrospectives, testing, and iterative feature delivery across the full software lifecycle.",
     ],
     github: "elitearticles",
-    demo: "elitearticles",
+    demo: null,
   },
   "mhike-android": {
     title: "M-Hike — Native Android Application",
@@ -85,7 +85,11 @@ const PROJECTS = {
       "Contact Manager: Room storage, RecyclerView, Kotlin Coroutines, DAO/repository pattern, form validation, and custom adapters.",
       "Image Viewer: gallery-style navigation with drawable resources, circular previous/next controls, fade animations, and on-screen image counter.",
     ],
-    github: null,
+    githubRepos: [
+      { label: "Contact Manager", key: "android-contacts" },
+      { label: "Calculator", key: "android-calculator" },
+      { label: "Image Viewer", key: "android-imageviewer" },
+    ],
     demo: null,
   },
   nature: {
@@ -102,7 +106,7 @@ const PROJECTS = {
       "Designed user flows, site maps, conceptual diagrams, and interface structures focused on usability and child-friendly interaction.",
       "Conducted research on gamification, AR learning, multimodal interaction, accessibility, and educational application design.",
     ],
-    github: null,
+    github: "nature",
     demo: null,
   },
   libraria: {
@@ -121,7 +125,7 @@ const PROJECTS = {
       "Delivered functional and usability testing, deployment planning, data migration planning, and user training documentation.",
     ],
     github: "libraria",
-    demo: "libraria",
+    demo: null,
   },
   smcworld: {
     title: "SMCWorld — Social Media Campaign Website",
@@ -139,7 +143,7 @@ const PROJECTS = {
       "Supported campaign participation and social media safety education through user-focused content workflows.",
     ],
     github: "smcworld",
-    demo: "smcworld",
+    demo: null,
   },
   camping: {
     title: "K Camping World (RCC) — Camping Equipment E-Commerce",
@@ -156,7 +160,7 @@ const PROJECTS = {
       "Embedded multimedia content including YouTube videos, Google Maps, and PDF documents.",
     ],
     github: "camping",
-    demo: "camping",
+    demo: null,
   },
   brightcare: {
     title: "Bright Care Health Ltd — Telehealth Platform Analysis",
@@ -189,7 +193,7 @@ const PROJECTS = {
       "Designed a project management dashboard prototype and analyzed process-oriented and people-oriented information system methodologies.",
       "Produced structured analytical documentation, evaluations, and recommendations for improving organizational workflows and system effectiveness.",
     ],
-    github: null,
+    github: "infinity",
     demo: null,
   },
   wellcome: {
@@ -278,7 +282,7 @@ const PROJECTS = {
       "Designed clear desktop workflows with validation controls and data grids for managing user and activity records.",
       "Produced testing plans, algorithms, class diagrams, and technical documentation as part of the project lifecycle.",
     ],
-    github: null,
+    github: "fitness",
     demo: null,
   },
   mcdonalds: {

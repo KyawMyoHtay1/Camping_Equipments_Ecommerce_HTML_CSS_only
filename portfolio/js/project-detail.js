@@ -37,8 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const bullets = p.bullets.map((b) => `<li class="text-gray-700 dark:text-slate-300">${b}</li>`).join("");
 
   let actions = "";
-  if (p.github) {
-    actions += `<a href="#" data-project="${p.github}" class="project-github rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500">GitHub</a>`;
+  const ghBtn =
+    'class="project-github rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500"';
+  if (p.githubRepos?.length) {
+    p.githubRepos.forEach((repo) => {
+      actions += `<a href="#" data-project="${repo.key}" ${ghBtn}>${repo.label}</a>`;
+    });
+  } else if (p.github) {
+    actions += `<a href="#" data-project="${p.github}" ${ghBtn}>GitHub</a>`;
   }
   if (p.demo) {
     actions += `<a href="#" data-project="${p.demo}" class="project-demo rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-50 dark:border-white/20 dark:text-slate-300 dark:hover:bg-white/5">Live Demo</a>`;
