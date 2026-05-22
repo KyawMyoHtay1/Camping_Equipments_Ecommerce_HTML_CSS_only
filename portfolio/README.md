@@ -1,31 +1,45 @@
 # Portfolio — Kyaw Myo Htay
 
-Multi-page developer portfolio built with **Tailwind CSS** (CDN).
+Multi-page **junior web developer** portfolio (Tailwind CSS, light/dark mode).
 
-## Site structure
+## Pages
 
-| Page | File | Content |
-|------|------|---------|
-| Home | `index.html` | Hero, explore cards, featured projects |
-| About | `about.html` | Objective, soft skills, languages |
-| Skills | `skills.html` | Full technical skills from CV |
-| Projects | `projects.html` | Project grid + filters + analysis/other lists |
-| Project detail | `project.html?id=portal` | Single project (dynamic) |
-| Education | `education.html` | Degrees + all certifications |
-| Contact | `contact.html` | Email, phone, LinkedIn, GitHub |
+| Page | File |
+|------|------|
+| Home | `index.html` |
+| About | `about.html` — career focus, strengths |
+| Skills | `skills.html` |
+| Projects | `projects.html` |
+| Project detail | `project.html?id=portal` |
+| Education | `education.html` |
+| Contact | `contact.html` |
 
-## Preview
+## Preview locally
 
-Open `index.html` in your browser and use the top navigation.
+Open `index.html` in a browser, or run:
 
-## Customize GitHub links
+```bash
+python -m http.server 8080
+```
 
-Edit `js/main.js` → `PROJECT_LINKS` with real repo and demo URLs per project.
+Then visit `http://localhost:8080/`
 
-## Project content
+## Customize
 
-Edit `js/projects-data.js` to update project titles, bullets, and tech stacks.
+- **GitHub links:** `js/main.js` → `PROJECT_LINKS`
+- **Project text:** `js/projects-data.js`
+- **Profile photo:** `images/profile.jpg`
 
-## Deploy
+## Deploy (recommended)
 
-Upload the entire `portfolio/` folder to GitHub Pages or Netlify. Set `index.html` as the entry page.
+1. Create a GitHub repo (e.g. `kyawmyohtay-portfolio`)
+2. Upload the `portfolio/` folder contents
+3. Enable **GitHub Pages** → Settings → Pages → branch `main` / folder root
+4. Put the live URL on your CV, LinkedIn, and job applications
+
+Alternatives: Netlify, Vercel (drag-and-drop the folder).
+
+## Job applications
+
+- **Portfolio:** English, short, professional (already set up)
+- **Company forms (e.g. MTM):** Paste your full Burmese answers in *their* application — do not duplicate long form text on the public site
