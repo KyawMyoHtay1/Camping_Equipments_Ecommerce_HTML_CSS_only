@@ -1,3 +1,35 @@
+const PROJECT_GRADIENTS = {
+  portal: "from-cv-navy to-indigo-900",
+  elitearticles: "from-indigo-900 to-cv-navy",
+  "mhike-android": "from-emerald-800 to-cv-navy",
+  "mhike-rn": "from-teal-800 to-cv-navy",
+  android: "from-sky-800 to-cv-navy",
+  nature: "from-cyan-800 to-cv-navy",
+  libraria: "from-teal-800 to-cv-navy",
+  smcworld: "from-amber-800 to-cv-navy",
+  camping: "from-orange-800 to-cv-navy",
+  brightcare: "from-rose-800 to-cv-navy",
+  infinity: "from-violet-800 to-cv-navy",
+  wellcome: "from-red-900 to-cv-navy",
+  geekup: "from-indigo-800 to-cv-navy",
+  gotham: "from-slate-700 to-cv-navy",
+  walmart: "from-blue-800 to-cv-navy",
+  fitness: "from-green-800 to-cv-navy",
+  mcdonalds: "from-yellow-800 to-cv-navy",
+  fordley: "from-gray-700 to-cv-navy",
+  connect4: "from-purple-800 to-cv-navy",
+  computersystems: "from-cv-navy to-slate-800",
+};
+
+const PROJECT_IMAGES = {
+  portal: "images/portal.jpg",
+  elitearticles: "images/elitearticles.jpg",
+  "mhike-android": "images/mhike.jpg",
+  libraria: "images/libraria.jpg",
+  smcworld: "images/smcworld.jpg",
+  camping: "images/camping.jpg",
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("projects-grid");
   if (!grid) return;
@@ -5,58 +37,45 @@ document.addEventListener("DOMContentLoaded", () => {
   const renderCard = (id) => {
     const p = PROJECTS[id];
     if (!p) return "";
-    const tech = p.tech.slice(0, 4).map((t) => `<span class="text-xs text-slate-500">${t}</span>`).join(" · ");
+    const grad = PROJECT_GRADIENTS[id] || "from-cv-navy to-cv-navy/80";
+    const img = PROJECT_IMAGES[id];
+    const media = img ? `<img src="${img}" alt="" class="h-full w-full object-cover" onerror="this.remove()">` : "";
     return `
-      <a href="project.html?id=${id}" class="group flex flex-col rounded-2xl border border-white/10 bg-slate-800/50 p-6 transition hover:border-indigo-500/40 hover:bg-slate-800 hover:shadow-lg hover:shadow-indigo-500/10">
-        <p class="text-xs font-medium uppercase tracking-wider text-indigo-400">${p.subtitle}</p>
-        <h3 class="mt-2 text-lg font-bold text-white group-hover:text-indigo-300">${p.title}</h3>
-        <p class="mt-2 flex-1 text-sm text-slate-400 line-clamp-2">${p.bullets[0]}</p>
-        <p class="mt-3 text-xs text-slate-500">${p.period}</p>
-        <p class="mt-2 text-xs text-slate-600">${tech}</p>
-        <span class="mt-4 text-sm font-medium text-indigo-400">View details →</span>
+      <a href="project.html?id=${id}" class="card-lift group flex flex-col overflow-hidden rounded-2xl border-2 border-cv-beige bg-white hover:border-cv-navy">
+        <div class="project-card-media bg-gradient-to-br ${grad}">
+          ${media}
+          <span class="absolute inset-0 flex items-center justify-center bg-cv-navy/25 px-3 text-center text-sm font-bold text-white">${p.title}</span>
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <p class="text-xs font-bold uppercase tracking-wider text-cv-navy">${p.subtitle}</p>
+          <p class="mt-2 flex-1 text-sm text-gray-600 line-clamp-2">${p.bullets[0]}</p>
+          <p class="mt-3 text-xs text-gray-500">${p.period}</p>
+          <span class="mt-4 text-sm font-semibold text-cv-navy">View details →</span>
+        </div>
       </a>`;
   };
 
-  grid.innerHTML = Object.keys(PROJECTS).map(renderCard).join("");
+  const renderGrid = (ids) => {
+    grid.innerHTML = ids.map(renderCard).join("");
+  };
 
-  const analysisEl = document.getElementById("analysis-list");
-  if (analysisEl) {
-    analysisEl.innerHTML = ANALYSIS_PROJECTS.map(
-      (a) => `
-      <div class="rounded-xl border border-white/10 bg-slate-800/40 p-5">
-        <h3 class="font-semibold text-white">${a.title}</h3>
-        <p class="mt-1 text-xs text-indigo-400">${a.period}</p>
-        <p class="mt-2 text-sm text-slate-400">${a.desc}</p>
-      </div>`
-    ).join("");
-  }
-
-  const otherEl = document.getElementById("other-list");
-  if (otherEl) {
-    otherEl.innerHTML = OTHER_PROJECTS.map(
-      (o) => `
-      <div class="rounded-lg border border-white/10 bg-slate-800/30 px-4 py-3">
-        <p class="font-medium text-slate-200">${o.title}</p>
-        <p class="mt-1 text-sm text-slate-500">${o.desc}</p>
-      </div>`
-    ).join("");
-  }
+  renderGrid(Object.keys(PROJECTS));
 
   document.querySelectorAll("[data-filter]").forEach((btn) => {
     btn.addEventListener("click", () => {
       document.querySelectorAll("[data-filter]").forEach((b) => {
-        b.classList.remove("bg-indigo-600", "text-white");
-        b.classList.add("text-slate-400", "hover:bg-white/5");
+        b.classList.remove("bg-cv-navy", "text-white", "shadow-md");
+        b.classList.add("border-2", "border-cv-beige", "bg-white", "text-gray-700");
       });
-      btn.classList.add("bg-indigo-600", "text-white");
-      btn.classList.remove("text-slate-400");
+      btn.classList.add("bg-cv-navy", "text-white", "shadow-md");
+      btn.classList.remove("border-2", "border-cv-beige", "bg-white", "text-gray-700");
 
       const filter = btn.dataset.filter;
       const ids =
         filter === "all"
           ? Object.keys(PROJECTS)
           : PROJECT_CATEGORIES.find((c) => c.id === filter)?.ids ?? Object.keys(PROJECTS);
-      grid.innerHTML = ids.map(renderCard).join("");
+      renderGrid(ids);
     });
   });
 });

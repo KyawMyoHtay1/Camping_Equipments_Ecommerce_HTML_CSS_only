@@ -3,117 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kyaw Myo Htay — Web & Mobile Developer Portfolio">
   <title>Kyaw Myo Htay | Home</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <script src="js/theme-config.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } } };</script>
 </head>
-<body data-page="home" class="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased">
-  <div id="site-header"></div>
-
-  <main class="pt-24">
-    <section class="relative overflow-hidden pb-16 sm:pb-24">
-      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/50 via-slate-950 to-slate-950"></div>
-      <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-20">
-        <div>
-          <p class="text-xs font-semibold tracking-[0.25em] text-indigo-400">PORTFOLIO</p>
-          <h1 class="mt-4 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
-            Kyaw Myo <span class="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">Htay</span>
-          </h1>
-          <p class="mt-4 text-xl text-indigo-300">Web & Mobile Developer</p>
-          <p class="mt-4 max-w-lg text-slate-400 leading-relaxed">
-            BSc (Hons) Computing · University of Greenwich / KMD · NCC L3–L5 Grade A.
-            Building with Laravel, Vue.js, PHP, Kotlin, and React Native.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="projects.html" class="rounded-xl bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-600/30 hover:bg-indigo-500">Explore Projects</a>
-            <a href="contact.html" class="rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold hover:bg-white/5">Get in Touch</a>
-          </div>
-          <div class="mt-8 flex gap-3">
-            <a href="https://github.com/KyawMyoHtay1" target="_blank" rel="noopener" class="rounded-lg border border-white/10 p-2.5 text-slate-400 hover:text-white" aria-label="GitHub"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A8.34 8.34 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
-            <a href="https://www.linkedin.com/in/kyaw-myo-htay-117b47360/" target="_blank" rel="noopener" class="rounded-lg border border-white/10 p-2.5 text-slate-400 hover:text-white" aria-label="LinkedIn"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-            <a href="mailto:kyawmyohtay2004@gmail.com" class="rounded-lg border border-white/10 p-2.5 text-slate-400 hover:text-white" aria-label="Email"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></a>
-          </div>
-        </div>
-        <div class="flex justify-center lg:justify-end">
-          <div class="relative">
-            <div class="absolute -inset-6 rounded-full bg-indigo-600/25 blur-3xl"></div>
-            <img src="images/profile.jpg" alt="Kyaw Myo Htay" class="relative h-72 w-72 rounded-2xl border-2 border-white/10 object-cover shadow-2xl sm:h-80 sm:w-80">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Explore cards -->
-    <section class="border-t border-white/10 bg-slate-900/40 py-20">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <h2 class="text-center text-2xl font-bold text-white sm:text-3xl">Explore my work</h2>
-        <p class="mx-auto mt-3 max-w-xl text-center text-slate-400">Each section has its own page — browse at your own pace.</p>
-        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <a href="about.html" class="group rounded-2xl border border-white/10 bg-slate-800/50 p-6 transition hover:border-indigo-500/50 hover:bg-slate-800">
-            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-500/20 text-indigo-400">01</div>
-            <h3 class="mt-4 font-bold text-white group-hover:text-indigo-300">About</h3>
-            <p class="mt-2 text-sm text-slate-400">Objective, soft skills, and languages.</p>
-          </a>
-          <a href="skills.html" class="group rounded-2xl border border-white/10 bg-slate-800/50 p-6 transition hover:border-indigo-500/50 hover:bg-slate-800">
-            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-violet-500/20 text-violet-400">02</div>
-            <h3 class="mt-4 font-bold text-white group-hover:text-violet-300">Skills</h3>
-            <p class="mt-2 text-sm text-slate-400">Full technical stack from your CV.</p>
-          </a>
-          <a href="projects.html" class="group rounded-2xl border border-white/10 bg-slate-800/50 p-6 transition hover:border-indigo-500/50 hover:bg-slate-800 sm:col-span-2 lg:col-span-1">
-            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400">03</div>
-            <h3 class="mt-4 font-bold text-white group-hover:text-emerald-300">Projects</h3>
-            <p class="mt-2 text-sm text-slate-400">Web, mobile, analysis — with detail pages.</p>
-          </a>
-          <a href="education.html" class="group rounded-2xl border border-white/10 bg-slate-800/50 p-6 transition hover:border-indigo-500/50 hover:bg-slate-800">
-            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-500/20 text-amber-400">04</div>
-            <h3 class="mt-4 font-bold text-white group-hover:text-amber-300">Education</h3>
-            <p class="mt-2 text-sm text-slate-400">Degrees, NCC grades, certifications.</p>
-          </a>
-          <a href="contact.html" class="group rounded-2xl border border-white/10 bg-indigo-600/20 p-6 transition hover:border-indigo-400/50 sm:col-span-2 lg:col-span-2">
-            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-500/30 text-indigo-300">05</div>
-            <h3 class="mt-4 font-bold text-white">Contact</h3>
-            <p class="mt-2 text-sm text-slate-300">Email, phone, LinkedIn — let's connect.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured preview -->
-    <section class="py-20">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-wrap items-end justify-between gap-4">
+<body data-page="home" class="bg-gray-50 font-sans text-gray-900 antialiased">
+  <div id="site-sidebar"></div>
+  <div class="lg:pl-72">
+    <main class="page-enter px-6 py-10 sm:px-10 lg:px-14 lg:py-12">
+      <section class="hero-panel overflow-hidden rounded-2xl p-8 sm:p-10 lg:p-12">
+        <div class="grid items-center gap-10 lg:grid-cols-2">
           <div>
-            <p class="text-sm font-semibold uppercase tracking-widest text-indigo-400">Highlighted</p>
-            <h2 class="mt-2 text-2xl font-bold text-white">Recent projects</h2>
+            <span class="inline-flex items-center gap-2 rounded-full border border-cv-navy/20 bg-white px-3 py-1 text-xs font-medium text-cv-navy">
+              <span class="pulse-dot h-2 w-2 rounded-full bg-emerald-500"></span>
+              Open to opportunities
+            </span>
+            <p class="mt-6 text-xs font-bold uppercase tracking-[0.3em] text-cv-navy">Hello, I'm</p>
+            <h1 class="mt-2 text-4xl font-extrabold leading-tight sm:text-5xl">Kyaw Myo <span class="text-cv-navy">Htay</span></h1>
+            <p class="mt-3 text-xl font-semibold text-gray-700">Web & Mobile Developer</p>
+            <p class="mt-5 max-w-lg leading-relaxed text-gray-600">
+              Computing graduate with hands-on experience in full-stack web development, mobile apps, system analysis, and database design.
+              BSc (Hons) Computing · Greenwich / KMD · NCC L3–L5 Grade A.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="projects.html" class="rounded-xl bg-cv-navy px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-cv-navy/90">View Projects</a>
+              <a href="contact.html" class="rounded-xl border-2 border-cv-navy px-6 py-3 text-sm font-semibold text-cv-navy hover:bg-cv-beige/60">Contact</a>
+            </div>
           </div>
-          <a href="projects.html" class="text-sm font-medium text-indigo-400 hover:text-indigo-300">View all →</a>
+          <div class="relative flex justify-center lg:justify-end">
+            <div class="absolute -inset-4 rounded-2xl bg-cv-beige/60 blur-2xl"></div>
+            <img src="images/profile.jpg" alt="Kyaw Myo Htay" class="relative h-72 w-72 rounded-xl border-4 border-white object-cover shadow-2xl sm:h-80 sm:w-80" onerror="this.classList.add('hidden')">
+          </div>
         </div>
-        <div class="mt-8 grid gap-5 sm:grid-cols-3">
-          <a href="project.html?id=portal" class="rounded-2xl border border-white/10 bg-gradient-to-br from-indigo-900/40 to-slate-900 p-6 hover:border-indigo-500/40">
-            <p class="text-xs text-indigo-400">FYP · Laravel + Vue</p>
-            <h3 class="mt-2 font-bold text-white">Academic Portal</h3>
-            <p class="mt-2 text-sm text-slate-400">Multi-role university system with Stripe & RBAC.</p>
-          </a>
-          <a href="project.html?id=elitearticles" class="rounded-2xl border border-white/10 bg-gradient-to-br from-violet-900/40 to-slate-900 p-6 hover:border-violet-500/40">
-            <p class="text-xs text-violet-400">Team Lead · Laravel</p>
-            <h3 class="mt-2 font-bold text-white">EliteArticles</h3>
-            <p class="mt-2 text-sm text-slate-400">Magazine system with Scrum & Jira.</p>
-          </a>
-          <a href="project.html?id=mhike" class="rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-900/40 to-slate-900 p-6 hover:border-emerald-500/40">
-            <p class="text-xs text-emerald-400">Mobile</p>
-            <h3 class="mt-2 font-bold text-white">M-Hike</h3>
-            <p class="mt-2 text-sm text-slate-400">Kotlin Android + React Native cross-platform.</p>
-          </a>
+        <div class="mt-10 grid grid-cols-2 gap-4 border-t border-cv-beige pt-8 sm:grid-cols-4">
+          <div><p class="text-2xl font-bold text-cv-navy">A</p><p class="text-xs text-gray-500">NCC L3–L5</p></div>
+          <div><p class="text-2xl font-bold text-cv-navy">20+</p><p class="text-xs text-gray-500">Projects</p></div>
+          <div><p class="text-2xl font-bold text-cv-navy">FYP</p><p class="text-xs text-gray-500">Full Stack</p></div>
+          <div><p class="text-2xl font-bold text-cv-navy">EN</p><p class="text-xs text-gray-500">Intermediate</p></div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <div id="site-footer"></div>
+      <section class="mt-16">
+        <h2 class="section-title text-sm font-bold uppercase tracking-[0.2em]">Explore</h2>
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="about.html" class="card-lift rounded-2xl border-2 border-cv-beige bg-white p-6 hover:border-cv-navy"><div class="flex h-10 w-10 items-center justify-center rounded-lg bg-cv-navy text-sm font-bold text-white">01</div><h3 class="mt-4 font-bold">About</h3><p class="mt-2 text-sm text-gray-600">Objective & soft skills</p></a>
+          <a href="skills.html" class="card-lift rounded-2xl border-2 border-cv-beige bg-white p-6 hover:border-cv-navy"><div class="flex h-10 w-10 items-center justify-center rounded-lg bg-cv-navy text-sm font-bold text-white">02</div><h3 class="mt-4 font-bold">Skills</h3><p class="mt-2 text-sm text-gray-600">Technical stack</p></a>
+          <a href="projects.html" class="card-lift rounded-2xl border-2 border-cv-beige bg-white p-6 hover:border-cv-navy"><div class="flex h-10 w-10 items-center justify-center rounded-lg bg-cv-navy text-sm font-bold text-white">03</div><h3 class="mt-4 font-bold">Projects</h3><p class="mt-2 text-sm text-gray-600">All experience</p></a>
+          <a href="education.html" class="card-lift rounded-2xl border-2 border-cv-beige bg-white p-6 hover:border-cv-navy"><div class="flex h-10 w-10 items-center justify-center rounded-lg bg-cv-navy text-sm font-bold text-white">04</div><h3 class="mt-4 font-bold">Education</h3><p class="mt-2 text-sm text-gray-600">Degrees & certs</p></a>
+          <a href="contact.html" class="card-lift rounded-2xl border-2 border-cv-navy bg-cv-navy p-6 text-white sm:col-span-2 lg:col-span-1"><div class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/20 text-sm font-bold">05</div><h3 class="mt-4 font-bold">Contact</h3></a>
+        </div>
+      </section>
+
+      <section class="mt-16">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <h2 class="section-title text-sm font-bold uppercase tracking-[0.2em]">Highlighted projects</h2>
+          <a href="projects.html" class="text-sm font-semibold text-cv-navy hover:underline">View all →</a>
+        </div>
+        <div class="mt-10 grid gap-6 sm:grid-cols-3">
+          <a href="project.html?id=portal" class="card-lift group overflow-hidden rounded-2xl border-2 border-cv-beige bg-white hover:border-cv-navy">
+            <div class="project-card-media bg-gradient-to-br from-cv-navy to-indigo-900"><span class="absolute inset-0 flex items-center justify-center font-bold text-white">Academic Portal</span></div>
+            <div class="p-5"><p class="text-xs font-bold uppercase text-cv-navy">FYP</p><h3 class="mt-2 font-bold">University Academic Portal</h3><p class="mt-2 text-sm text-gray-600">Laravel · Vue · Stripe · RBAC</p></div>
+          </a>
+          <a href="project.html?id=elitearticles" class="card-lift group overflow-hidden rounded-2xl border-2 border-cv-beige bg-white hover:border-cv-navy">
+            <div class="project-card-media bg-gradient-to-br from-indigo-900 to-cv-navy"><span class="absolute inset-0 flex items-center justify-center font-bold text-white">EliteArticles</span></div>
+            <div class="p-5"><p class="text-xs font-bold uppercase text-cv-navy">Team Lead</p><h3 class="mt-2 font-bold">Magazine System</h3><p class="mt-2 text-sm text-gray-600">Scrum · Jira · Laravel</p></div>
+          </a>
+          <a href="project.html?id=mhike-android" class="card-lift group overflow-hidden rounded-2xl border-2 border-cv-beige bg-white hover:border-cv-navy">
+            <div class="project-card-media bg-gradient-to-br from-emerald-800 to-cv-navy"><span class="absolute inset-0 flex items-center justify-center font-bold text-white">M-Hike</span></div>
+            <div class="p-5"><p class="text-xs font-bold uppercase text-cv-navy">Mobile</p><h3 class="mt-2 font-bold">M-Hike Android</h3><p class="mt-2 text-sm text-gray-600">Kotlin · SQLite</p></div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+  </div>
   <script src="js/layout.js" data-base=""></script>
 </body>
 </html>

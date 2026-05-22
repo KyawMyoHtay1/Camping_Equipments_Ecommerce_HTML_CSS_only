@@ -9,17 +9,15 @@
     { id: "skills", href: base + "skills.html", label: "Skills" },
     { id: "projects", href: base + "projects.html", label: "Projects" },
     { id: "education", href: base + "education.html", label: "Education" },
-    { id: "contact", href: base + "contact.html", label: "Contact", cta: true },
+    { id: "contact", href: base + "contact.html", label: "Contact" },
   ];
 
   const navItems = links
     .map((l) => {
       const active = page === l.id;
-      const cls = l.cta
-        ? "rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500"
-        : active
-          ? "rounded-lg bg-white/10 px-3 py-2 text-sm font-medium text-white"
-          : "rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white";
+      const cls = active
+        ? "rounded-lg bg-white/10 px-3 py-2 text-sm font-medium text-white"
+        : "rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/5 hover:text-white";
       return `<li><a href="${l.href}" class="${cls}">${l.label}</a></li>`;
     })
     .join("");
@@ -43,7 +41,7 @@
         </button>
         <ul id="navMenu" class="hidden gap-1 lg:flex">${navItems}</ul>
       </nav>
-      <ul id="navMobile" class="hidden border-t border-white/10 px-4 py-3 lg:hidden">${mobileItems}</ul>
+      <ul id="navMobile" class="hidden border-t border-white/10 bg-slate-950 px-4 py-3 lg:hidden">${mobileItems}</ul>
     </header>`;
 
   const footer = `
@@ -51,7 +49,7 @@
       <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 sm:flex-row sm:px-6 lg:px-8">
         <p class="text-sm text-slate-500">&copy; <span id="year"></span> Kyaw Myo Htay</p>
         <div class="flex flex-wrap justify-center gap-4 text-sm">
-          ${links.filter((l) => !l.cta).map((l) => `<a href="${l.href}" class="text-slate-400 hover:text-indigo-400">${l.label}</a>`).join("")}
+          ${links.map((l) => `<a href="${l.href}" class="text-slate-400 hover:text-indigo-400">${l.label}</a>`).join("")}
         </div>
         <a href="${base}index.html" class="text-sm font-medium text-indigo-400 hover:text-indigo-300">↑ Home</a>
       </div>
@@ -67,6 +65,7 @@
 
   const toggle = document.getElementById("navToggle");
   const mobile = document.getElementById("navMobile");
+  const desktop = document.getElementById("navMenu");
   toggle?.addEventListener("click", () => mobile?.classList.toggle("hidden"));
   mobile?.querySelectorAll("a").forEach((a) =>
     a.addEventListener("click", () => mobile.classList.add("hidden"))

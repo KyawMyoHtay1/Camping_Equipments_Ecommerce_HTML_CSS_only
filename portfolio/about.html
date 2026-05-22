@@ -5,33 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Kyaw Myo Htay</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <script src="js/theme-config.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } } };</script>
 </head>
-<body data-page="about" class="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased">
-  <div id="site-header"></div>
-
-  <main class="pt-28 pb-20">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-      <p class="text-sm font-semibold uppercase tracking-widest text-indigo-400">About</p>
-      <h1 class="mt-2 text-4xl font-bold text-white">Who I am</h1>
-
-      <div class="mt-12 grid gap-10 lg:grid-cols-5">
-        <div class="lg:col-span-3 space-y-5 text-lg text-slate-300 leading-relaxed">
-          <p>Dedicated and adaptable Computing student with practical experience in web development, mobile application development, database design, and system analysis through academic and software engineering projects. Proficient in building responsive applications using modern technologies and applying Agile development practices, teamwork, and problem-solving skills.</p>
-          <p>Eager to contribute technical knowledge and analytical abilities to a professional IT environment while continuing to develop expertise in software and business technology solutions.</p>
+<body data-page="about" class="bg-gray-50 font-sans text-gray-900 antialiased">
+  <div id="site-sidebar"></div>
+  <div class="lg:pl-72">
+    <main class="page-enter px-6 py-10 sm:px-10 lg:px-14 lg:py-12">
+      <h1 class="section-title text-sm font-bold uppercase tracking-[0.2em]">Objective</h1>
+      <div class="mt-10 grid gap-10 lg:grid-cols-3">
+        <div class="lg:col-span-2 space-y-5 leading-relaxed text-gray-700">
+          <p>Motivated and detail-oriented Computing graduate with hands-on experience in full-stack web development, mobile application development, system analysis, and database design through multiple academic and software engineering projects.</p>
+          <p>Skilled in developing responsive web and mobile applications using modern technologies while applying Agile methodologies, problem-solving, teamwork, and technical documentation practices.</p>
+          <p>Seeking an opportunity to contribute technical and analytical skills to a professional IT environment while continuing to grow in software development and business technology solutions.</p>
         </div>
-        <div class="lg:col-span-2 space-y-5">
-          <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
-            <h2 class="font-semibold text-white">Languages</h2>
-            <ul class="mt-4 space-y-3">
-              <li class="flex justify-between text-sm"><span class="text-slate-400">English</span><span class="font-medium text-indigo-300">Intermediate</span></li>
-              <li class="flex justify-between text-sm"><span class="text-slate-400">Myanmar</span><span class="font-medium text-indigo-300">Native</span></li>
+        <div class="space-y-5">
+          <div class="rounded-2xl border-2 border-cv-beige bg-white p-6">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-cv-navy">Languages</h2>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li class="flex justify-between"><span>English</span><span class="font-semibold">Intermediate</span></li>
+              <li class="flex justify-between"><span>Myanmar</span><span class="font-semibold">Native</span></li>
             </ul>
           </div>
-          <div class="rounded-2xl border border-white/10 bg-slate-900/80 p-6">
-            <h2 class="font-semibold text-white">Quick facts</h2>
-            <ul class="mt-4 space-y-2 text-sm text-slate-400">
+          <div class="rounded-2xl border-2 border-cv-beige bg-white p-6">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-cv-navy">Quick facts</h2>
+            <ul class="mt-4 space-y-2 text-sm text-gray-600">
               <li>BSc (Hons) Computing — in progress</li>
               <li>NCC L3, L4, L5 — Grade A</li>
               <li>Yangon, Myanmar</li>
@@ -39,29 +38,24 @@
           </div>
         </div>
       </div>
-
-      <div class="mt-16">
-        <h2 class="text-2xl font-bold text-white">Soft skills</h2>
-        <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="rounded-xl border border-white/10 bg-slate-800/40 px-4 py-3 text-sm text-slate-300">Communication</div>
-          <div class="rounded-xl border border-white/10 bg-slate-800/40 px-4 py-3 text-sm text-slate-300">Problem-solving</div>
-          <div class="rounded-xl border border-white/10 bg-slate-800/40 px-4 py-3 text-sm text-slate-300">Teamwork & collaboration</div>
-          <div class="rounded-xl border border-white/10 bg-slate-800/40 px-4 py-3 text-sm text-slate-300">Leadership & coordination</div>
-          <div class="rounded-xl border border-white/10 bg-slate-800/40 px-4 py-3 text-sm text-slate-300">Time management</div>
-          <div class="rounded-xl border border-white/10 bg-slate-800/40 px-4 py-3 text-sm text-slate-300">Analytical thinking</div>
-          <div class="rounded-xl border border-white/10 bg-slate-800/40 px-4 py-3 text-sm text-slate-300">Adaptability & learning</div>
-          <div class="rounded-xl border border-white/10 bg-slate-800/40 px-4 py-3 text-sm text-slate-300">Attention to detail</div>
-        </div>
+      <h2 class="section-title mt-16 text-sm font-bold uppercase tracking-[0.2em]">Soft skills</h2>
+      <div class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-xl border border-cv-beige bg-white px-4 py-3 text-sm">Communication</div>
+        <div class="rounded-xl border border-cv-beige bg-white px-4 py-3 text-sm">Problem-solving</div>
+        <div class="rounded-xl border border-cv-beige bg-white px-4 py-3 text-sm">Teamwork & collaboration</div>
+        <div class="rounded-xl border border-cv-beige bg-white px-4 py-3 text-sm">Leadership & coordination</div>
+        <div class="rounded-xl border border-cv-beige bg-white px-4 py-3 text-sm">Time management</div>
+        <div class="rounded-xl border border-cv-beige bg-white px-4 py-3 text-sm">Analytical thinking</div>
+        <div class="rounded-xl border border-cv-beige bg-white px-4 py-3 text-sm">Adaptability & learning</div>
+        <div class="rounded-xl border border-cv-beige bg-white px-4 py-3 text-sm">Attention to detail</div>
       </div>
-
       <div class="mt-12 flex gap-4">
-        <a href="skills.html" class="rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500">View skills →</a>
-        <a href="projects.html" class="rounded-xl border border-white/20 px-5 py-2.5 text-sm font-semibold hover:bg-white/5">View projects</a>
+        <a href="projects.html" class="rounded-xl bg-cv-navy px-5 py-2.5 text-sm font-semibold text-white hover:bg-cv-navy/90">Projects →</a>
+        <a href="skills.html" class="rounded-xl border-2 border-cv-navy px-5 py-2.5 text-sm font-semibold text-cv-navy hover:bg-cv-beige/50">Skills</a>
       </div>
-    </div>
-  </main>
-
-  <div id="site-footer"></div>
+    </main>
+    <div id="site-footer"></div>
+  </div>
   <script src="js/layout.js" data-base=""></script>
 </body>
 </html>
