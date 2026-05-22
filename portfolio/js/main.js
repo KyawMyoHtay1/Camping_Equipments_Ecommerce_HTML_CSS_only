@@ -1,5 +1,16 @@
-// Project links — UPDATE these URLs when you have GitHub repos and live demos
+/**
+ * Portfolio — Kyaw Myo Htay
+ * Update PROJECT_LINKS with your real GitHub & demo URLs
+ */
 const PROJECT_LINKS = {
+  portal: {
+    github: "https://github.com/KyawMyoHtay1",
+    demo: "#",
+  },
+  elitearticles: {
+    github: "https://github.com/KyawMyoHtay1",
+    demo: "#",
+  },
   libraria: {
     github: "https://github.com/KyawMyoHtay1",
     demo: "#",
@@ -8,48 +19,86 @@ const PROJECT_LINKS = {
     github: "https://github.com/KyawMyoHtay1",
     demo: "#",
   },
-  portal: {
-    github: "https://github.com/KyawMyoHtay1",
-    demo: "#",
-  },
   camping: {
-    github: "https://github.com/KyawMyoHtay1",
-    demo: "#",
-  },
-  elitearticles: {
     github: "https://github.com/KyawMyoHtay1",
     demo: "#",
   },
 };
 
-document.getElementById("year").textContent = new Date().getFullYear();
+const header = document.getElementById("header");
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector(".nav-menu");
+const navLinks = document.querySelectorAll(".nav-link");
+const backTop = document.getElementById("backTop");
+const yearEl = document.getElementById("year");
 
-// Mobile nav
-const toggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelector(".nav-links");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-if (toggle && navLinks) {
-  toggle.addEventListener("click", () => {
-    const open = navLinks.classList.toggle("is-open");
-    toggle.setAttribute("aria-expanded", open);
+/* Mobile menu */
+if (navToggle && navMenu) {
+  navToggle.addEventListener("click", () => {
+    const open = navMenu.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", open);
   });
 
-  navLinks.querySelectorAll("a").forEach((link) => {
+  navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      navLinks.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
+      navMenu.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
     });
   });
 }
 
-// Apply project links from config
+/* Header scroll */
+window.addEventListener("scroll", () => {
+  if (header) header.classList.toggle("scrolled", window.scrollY > 40);
+  if (backTop) backTop.classList.toggle("visible", window.scrollY > 500);
+});
+
+/* Active nav + scroll spy */
+const sections = document.querySelectorAll("section[id]");
+
+function setActiveNav() {
+  const scrollY = window.scrollY + 120;
+  sections.forEach((section) => {
+    const id = section.getAttribute("id");
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    if (scrollY >= top && scrollY < top + height) {
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${id}`) link.classList.add("active");
+      });
+    }
+  });
+}
+
+window.addEventListener("scroll", setActiveNav);
+setActiveNav();
+
+/* Scroll reveal */
+const revealEls = document.querySelectorAll(".reveal");
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+);
+
+revealEls.forEach((el) => revealObserver.observe(el));
+
+/* Project links */
 document.querySelectorAll(".project-github").forEach((btn) => {
   const key = btn.dataset.project;
   const url = PROJECT_LINKS[key]?.github;
   if (url) {
     btn.href = url;
     btn.target = "_blank";
-    btn.rel = "noopener";
+    btn.rel = "noopener noreferrer";
   }
 });
 
@@ -59,12 +108,11 @@ document.querySelectorAll(".project-demo").forEach((btn) => {
   if (url && url !== "#") {
     btn.href = url;
     btn.target = "_blank";
-    btn.rel = "noopener";
+    btn.rel = "noopener noreferrer";
   } else {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-    });
-    btn.style.opacity = "0.6";
-    btn.title = "Add live demo URL in js/main.js";
+    btn.href = "#";
+    btn.classList.add("disabled");
+    btn.addEventListener("click", (e) => e.preventDefault());
+    btn.title = "Demo coming soon";
   }
 });

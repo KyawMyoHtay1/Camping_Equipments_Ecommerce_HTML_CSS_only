@@ -1,43 +1,33 @@
-# Kyaw Myo Htay — Portfolio Website
+# Professional Portfolio — Kyaw Myo Htay
 
-Single-page portfolio for junior web developer interviews.
+Modern dark-theme developer portfolio (HTML / CSS / JavaScript).
 
-## Open locally
+## Preview locally
 
-1. Open `index.html` in a browser, or
-2. Use VS Code Live Server on the `portfolio` folder.
+Open `index.html` in Chrome/Edge, or use **Live Server** in VS Code.
 
-## What YOU need to add
+## Customize (required for interview)
 
-### Required (for interview)
+| File | What to change |
+|------|----------------|
+| `images/profile.jpg` | Your professional photo (square, min 400×400) |
+| `images/*.jpg` | Project screenshots (portal, libraria, smcworld, camping, elitearticles) |
+| `js/main.js` → `PROJECT_LINKS` | Real GitHub & live demo URLs per project |
 
-| Item | Path / file | Notes |
-|------|-------------|--------|
-| **Profile photo** | `images/profile.jpg` | Square, ~400×400 px, professional |
-| **Project screenshots** | `images/libraria.jpg`, `smcworld.jpg`, `portal.jpg`, `camping.jpg`, `elitearticles.jpg` | Home page or best screen per project |
-| **GitHub URLs** | Edit `js/main.js` → `PROJECT_LINKS` | One repo URL per project |
-| **Live demo URLs** | Same file (optional) | Hosting link or `#` if none |
+## Deploy (GitHub Pages)
 
-### Optional
+1. Create repo `kyawmyohtay-portfolio`
+2. Upload all files in this folder
+3. Settings → Pages → Deploy from `main` branch
+4. Add URL to CV and LinkedIn
 
-- Change colors in `css/style.css` (`:root` variables)
-- Add/remove projects in `index.html`
-- Deploy to GitHub Pages (see below)
-
-## Deploy to GitHub Pages (free)
-
-1. Create repo e.g. `kyawmyohtay-portfolio`
-2. Upload all files in `portfolio/`
-3. Settings → Pages → branch `main` → folder `/` (root)
-4. URL: `https://KyawMyoHtay1.github.io/kyawmyohtay-portfolio/`
-
-## Folder structure
+## Structure
 
 ```
 portfolio/
 ├── index.html
 ├── css/style.css
 ├── js/main.js
-├── images/          ← add your photos here
+├── images/
 └── README.md
 ```
