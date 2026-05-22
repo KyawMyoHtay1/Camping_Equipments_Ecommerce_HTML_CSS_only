@@ -21,15 +21,6 @@ const PROJECT_GRADIENTS = {
   computersystems: "from-slate-400 to-slate-700 dark:from-slate-800/60 dark:to-slate-900",
 };
 
-const PROJECT_IMAGES = {
-  portal: "images/portal.jpg",
-  elitearticles: "images/elitearticles.jpg",
-  "mhike-android": "images/mhike.jpg",
-  libraria: "images/libraria.jpg",
-  smcworld: "images/smcworld.jpg",
-  camping: "images/camping.jpg",
-};
-
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("projects-grid");
   if (!grid || !window.THEME) return;
@@ -39,13 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const p = PROJECTS[id];
     if (!p) return "";
     const grad = PROJECT_GRADIENTS[id] || "from-indigo-300 to-indigo-500 dark:from-indigo-900/60 dark:to-slate-900";
-    const img = PROJECT_IMAGES[id];
-    const media = img ? `<img src="${img}" alt="" class="h-full w-full object-cover" onerror="this.remove()">` : "";
+    const img = window.PROJECT_IMAGES?.[id];
+    const media = img
+      ? `<img src="${img}" alt="" class="h-full w-full object-cover">`
+      : "";
+    const overlay = img
+      ? `<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/40 to-transparent px-3 pb-3 pt-8"><p class="text-sm font-bold leading-snug text-white line-clamp-2">${p.title}</p></div>`
+      : `<span class="absolute inset-0 flex items-center justify-center bg-white/20 px-3 text-center text-sm font-bold text-gray-900 dark:bg-slate-950/30 dark:text-white">${p.title}</span>`;
     return `
       <a href="project.html?id=${id}" class="${T.card}">
         <div class="project-card-media bg-gradient-to-br ${grad}">
           ${media}
-          <span class="absolute inset-0 flex items-center justify-center bg-white/20 px-3 text-center text-sm font-bold text-gray-900 dark:bg-slate-950/30 dark:text-white">${p.title}</span>
+          ${overlay}
         </div>
         <div class="${T.cardInner}">
           <p class="${T.label}">${p.subtitle}</p>

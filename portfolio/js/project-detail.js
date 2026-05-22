@@ -13,15 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     smcworld: "from-amber-400 to-orange-600 dark:from-amber-900 dark:to-orange-900",
     camping: "from-orange-400 to-amber-600 dark:from-orange-900 dark:to-amber-900",
   };
-  const images = {
-    portal: "images/portal.jpg",
-    elitearticles: "images/elitearticles.jpg",
-    "mhike-android": "images/mhike.jpg",
-    libraria: "images/libraria.jpg",
-    smcworld: "images/smcworld.jpg",
-    camping: "images/camping.jpg",
-  };
-
   if (!p || !root) {
     if (root) {
       root.innerHTML =
@@ -32,8 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.title = `${p.title} | Kyaw Myo Htay`;
   const grad = gradients[id] || "from-indigo-500 to-slate-700 dark:from-indigo-900 dark:to-slate-800";
-  const img = images[id];
-  const bannerImg = img ? `<img src="${img}" alt="" class="absolute inset-0 h-full w-full object-cover opacity-25 dark:opacity-30" onerror="this.remove()">` : "";
+  const img = window.PROJECT_IMAGES?.[id];
+  const bannerImg = img
+    ? `<img src="${img}" alt="" class="absolute inset-0 h-full w-full object-cover opacity-40 dark:opacity-35">`
+    : "";
 
   const tech = p.tech
     .map(
