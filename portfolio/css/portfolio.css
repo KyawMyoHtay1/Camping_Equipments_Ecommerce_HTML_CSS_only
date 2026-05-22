@@ -31,6 +31,16 @@ html.dark .card-lift:hover {
 .group:hover .project-card-media img { transform: scale(1.05); }
 
 /* Theme toggle icons */
-[data-theme-icon] { display: none; }
-html:not(.dark) [data-theme-icon="sun"] { display: block; }
-html.dark [data-theme-icon="moon"] { display: block; }
+#themeToggle [data-theme-icon] { display: none; }
+html:not(.dark) #themeToggle [data-theme-icon="sun"] { display: block; }
+html.dark #themeToggle [data-theme-icon="moon"] { display: block; }
+
+/* Fallback if Tailwind dark: utilities are not generated (CDN config order) */
+html:not(.dark) body {
+  background-color: #f9fafb;
+  color: #111827;
+}
+html.dark body {
+  background-color: #020617;
+  color: #f1f5f9;
+}
