@@ -1,0 +1,9 @@
+{
+  "name": "Kyaw Myo Htay — Portfolio",
+  "short_name": "K. Htay",
+  "description": "Junior Web Developer portfolio",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }],
+  "theme_color": "#4f46e5",
+  "background_color": "#f9fafb",
+  "display": "standalone"
+}
