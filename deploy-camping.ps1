@@ -2,10 +2,25 @@ $ErrorActionPreference = "Stop"
 
 $Root = $PSScriptRoot
 $DeployBranch = "camping-pages"
-$PagesSettingsUrl = "https://github.com/KyawMyoHtay2004/Camping_Equipments_Ecommerce_HTML_CSS_only/settings/pages"
-$LiveUrl = "https://kyawmyohtay2004.github.io/Camping_Equipments_Ecommerce_HTML_CSS_only/"
 
 Set-Location $Root
+
+$OriginUrl = (git remote get-url origin).Trim()
+
+if (-not $OriginUrl) {
+    Write-Host "No origin remote is configured for this repository." -ForegroundColor Red
+    exit 1
+}
+
+if ($OriginUrl -notmatch 'github\.com[:/](?<owner>[^/]+)/(?<repo>[^/.]+)(?:\.git)?$') {
+    Write-Host "Origin does not look like a GitHub repository URL: $OriginUrl" -ForegroundColor Red
+    exit 1
+}
+
+$Owner = $Matches.owner
+$Repo = $Matches.repo
+$PagesSettingsUrl = "https://github.com/$Owner/$Repo/settings/pages"
+$LiveUrl = "https://$($Owner.ToLower()).github.io/$Repo/"
 
 $Status = git status --short
 if ($Status) {

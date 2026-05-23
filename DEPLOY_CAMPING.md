@@ -2,11 +2,11 @@
 
 Your live site will be:
 
-**https://kyawmyohtay2004.github.io/Camping_Equipments_Ecommerce_HTML_CSS_only/**
+**https://kyawmyohtay1.github.io/Camping_Equipments_Ecommerce_HTML_CSS_only/**
 
 Repository:
 
-**https://github.com/KyawMyoHtay2004/Camping_Equipments_Ecommerce_HTML_CSS_only**
+**https://github.com/KyawMyoHtay1/Camping_Equipments_Ecommerce_HTML_CSS_only**
 
 ---
 
@@ -22,6 +22,7 @@ Repository:
 Run these commands from this project folder:
 
 ```powershell
+git remote set-url origin https://github.com/KyawMyoHtay1/Camping_Equipments_Ecommerce_HTML_CSS_only.git
 git add index.html deploy-camping.ps1 DEPLOY_CAMPING.md
 git commit -m "Prepare K Camping World for GitHub Pages"
 powershell -ExecutionPolicy Bypass -File .\deploy-camping.ps1
@@ -29,7 +30,7 @@ powershell -ExecutionPolicy Bypass -File .\deploy-camping.ps1
 
 Then open:
 
-**https://github.com/KyawMyoHtay2004/Camping_Equipments_Ecommerce_HTML_CSS_only/settings/pages**
+**https://github.com/KyawMyoHtay1/Camping_Equipments_Ecommerce_HTML_CSS_only/settings/pages**
 
 Use these settings:
 
@@ -40,7 +41,7 @@ Use these settings:
 
 Wait 1 to 3 minutes and then open:
 
-**https://kyawmyohtay2004.github.io/Camping_Equipments_Ecommerce_HTML_CSS_only/**
+**https://kyawmyohtay1.github.io/Camping_Equipments_Ecommerce_HTML_CSS_only/**
 
 ---
 
