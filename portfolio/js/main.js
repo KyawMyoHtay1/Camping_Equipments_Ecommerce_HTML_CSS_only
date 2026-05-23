@@ -2,7 +2,7 @@
 const PROJECT_LINKS = {
   portal: {
     github: "https://github.com/KyawMyoHtay1/academic-portal",
-    demo: null,
+    demo: "https://respectful-unity-production-e765.up.railway.app/",
   },
   elitearticles: {
     github: "https://github.com/Group-Project-C2/comp1640-magazine-system",
