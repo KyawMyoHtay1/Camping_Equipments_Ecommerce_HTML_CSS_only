@@ -26,7 +26,7 @@ const PROJECT_LINKS = {
   },
   camping: {
     github: "https://github.com/KyawMyoHtay1/Camping_Equipments_Ecommerce_HTML_CSS_only",
-    demo: null,
+    demo: "https://kyawmyohtay1.github.io/Camping_Equipments_Ecommerce_HTML_CSS_only/home.html",
   },
   nature: {
     github: "https://github.com/KyawMyoHtay1/nature_explore_Axure_RP11",

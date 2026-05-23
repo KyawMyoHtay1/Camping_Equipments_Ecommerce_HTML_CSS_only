@@ -161,9 +161,10 @@ const PROJECTS = {
       "Applied basic accessibility practices including alt text on images, form placeholders, and structured page layout.",
       "Carried out W3C HTML/CSS validation and cross-device responsive checks on desktop and mobile viewports.",
       "Embedded multimedia content including YouTube videos, Google Maps, and PDF documents.",
+      "Published a live demo on GitHub Pages for portfolio review and interviews.",
     ],
     github: "camping",
-    demo: null,
+    demo: "camping",
   },
   brightcare: {
     title: "Bright Care Health Ltd — Telehealth Platform Analysis",
