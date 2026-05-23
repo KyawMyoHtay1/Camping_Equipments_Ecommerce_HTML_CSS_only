@@ -18,7 +18,7 @@ const PROJECT_LINKS = {
   },
   libraria: {
     github: "https://github.com/KyawMyoHtay1/Library_Project_With_PHP-Bootstrap-Database",
-    demo: null,
+    demo: "https://libraryprojectwithphp-bootstrap-database-production.up.railway.app/",
   },
   smcworld: {
     github: "https://github.com/KyawMyoHtay1/Social-Media_Campaign",

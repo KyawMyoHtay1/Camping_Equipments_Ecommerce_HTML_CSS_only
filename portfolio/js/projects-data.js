@@ -124,9 +124,10 @@ const PROJECTS = {
       "Designed database schema and supporting models (use cases, class/sequence diagrams, prototypes, functional requirements).",
       "Applied Agile DSDM practices including MoSCoW prioritization, timeboxing, SWOT, risk management, and LESPI evaluation.",
       "Delivered functional and usability testing, deployment planning, data migration planning, and user training documentation.",
+      "Deployed a live demo on Railway for portfolio review and interviews.",
     ],
     github: "libraria",
-    demo: null,
+    demo: "libraria",
   },
   smcworld: {
     title: "SMCWorld — Social Media Campaign Website",
