@@ -22,7 +22,7 @@ const PROJECT_LINKS = {
   },
   smcworld: {
     github: "https://github.com/KyawMyoHtay1/Social-Media_Campaign",
-    demo: null,
+    demo: "https://social-mediacampaign-production.up.railway.app/",
   },
   camping: {
     github: "https://github.com/KyawMyoHtay1/Camping_Equipments_Ecommerce_HTML_CSS_only",

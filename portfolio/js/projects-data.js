@@ -142,9 +142,10 @@ const PROJECTS = {
       "Built responsive UI with custom CSS, media queries, animations, and structured multi-page navigation.",
       "Delivered CRUD operations for users and content, search filtering, Google reCAPTCHA, and Google Translate integration.",
       "Supported campaign participation and social media safety education through user-focused content workflows.",
+      "Deployed a live demo on Railway for portfolio review and interviews.",
     ],
     github: "smcworld",
-    demo: null,
+    demo: "smcworld",
   },
   camping: {
     title: "K Camping World (RCC) — Camping Equipment E-Commerce",
