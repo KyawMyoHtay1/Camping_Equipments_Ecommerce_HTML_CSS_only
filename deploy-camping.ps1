@@ -23,6 +23,10 @@ $PagesSettingsUrl = "https://github.com/$Owner/$Repo/settings/pages"
 $LiveUrl = "https://$($Owner.ToLower()).github.io/$Repo/"
 
 $Status = git status --short
+if ($LASTEXITCODE -ne 0) {
+    throw "git status failed."
+}
+
 if ($Status) {
     Write-Host "You have uncommitted changes." -ForegroundColor Yellow
     Write-Host "Commit your latest work first, then run this script again." -ForegroundColor Yellow
@@ -31,6 +35,9 @@ if ($Status) {
 
 Write-Host "Pushing current HEAD to origin/$DeployBranch ..." -ForegroundColor Cyan
 git push origin "HEAD:${DeployBranch}" --force
+if ($LASTEXITCODE -ne 0) {
+    throw "git push failed."
+}
 
 Write-Host ""
 Write-Host "If this is your first deployment, enable GitHub Pages here:" -ForegroundColor Green
